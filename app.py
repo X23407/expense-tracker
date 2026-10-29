@@ -1018,10 +1018,10 @@ elif page == "💳 Expenses (CRUD)":
 
     with io_c1:
         with st.container(border=True):
-            st.markdown('<div class="card-title">📥 Bank Statement CSV Import</div>', unsafe_allow_html=True)
-            st.write("Upload messy HDFC, SBI, ICICI or UPI statements. Skips credit deposits and duplicates automatically.")
+            st.markdown('<div class="card-title">📥 Bank & UPI Statement Import</div>', unsafe_allow_html=True)
+            st.write("Upload PhonePe, GPay, HDFC, SBI, ICICI or UPI statements (CSV or JSON). Skips credit deposits and duplicates automatically.")
 
-            up_file = st.file_uploader("Upload Statement CSV", type=["csv"], label_visibility="collapsed")
+            up_file = st.file_uploader("Upload Statement (CSV or JSON)", type=["csv", "json"], label_visibility="collapsed")
             use_demo_csv = st.button("Use Sample Bank Statement for Demo", type="secondary")
 
             file_to_parse = None

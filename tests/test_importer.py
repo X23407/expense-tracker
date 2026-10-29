@@ -132,3 +132,54 @@ https://support.phonepe.com/statement so that we can ensure the recipient's deta
     assert "2026-10-22" in dates
     assert "2026-10-18" in dates
 
+    # Verify amounts are parsed from Amount column, NOT from account digits in 'Credit/debit instrument'
+    amounts = list(res["cleaned_df"]["amount"])
+    assert 20.0 in amounts
+    assert 50.0 in amounts
+    assert 245.0 in amounts
+    assert 240.0 not in amounts
+    assert 4127.0 not in amounts
+
+
+def test_importer_handles_json_statement():
+    """Verify importer can parse JSON statements and filter credits correctly."""
+    import json
+    data = [
+        {
+            "Date": "Oct 24, 2026",
+            "Transaction Details": "Paid to Campus Cafe",
+            "Transaction Type": "DEBIT",
+            "Credit/debit instrument": "Paid by XXXXXX0240",
+            "Amount": "80",
+        },
+        {
+            "Date": "Oct 20, 2026",
+            "Transaction Details": "Received from Peer Transfer",
+            "Transaction Type": "CREDIT",
+            "Credit/debit instrument": "Credited to XXXXXX4127",
+            "Amount": "500",
+        },
+        {
+            "Date": "Oct 18, 2026",
+            "Transaction Details": "Paid to Bookstore",
+            "Transaction Type": "DEBIT",
+            "Credit/debit instrument": "Paid by XXXXXX4127",
+            "Amount": "350",
+        },
+    ]
+    json_stream = io.StringIO(json.dumps(data))
+    res = parse_and_process_statement(json_stream)
+
+    assert res["error"] is None
+    assert res["read"] == 3
+    assert res["credits_skipped"] == 1
+    assert res["imported"] == 2
+    assert len(res["cleaned_df"]) == 2
+
+    amounts = list(res["cleaned_df"]["amount"])
+    assert 80.0 in amounts
+    assert 350.0 in amounts
+    assert 240.0 not in amounts
+    assert 4127.0 not in amounts
+
+

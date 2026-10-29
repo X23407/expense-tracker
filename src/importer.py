@@ -242,6 +242,21 @@ def read_statement_csv(file_or_path: Union[str, Path, Any]) -> pd.DataFrame:
     if not text:
         return pd.DataFrame()
 
+    # Check if input is JSON (starts with [ or {)
+    if text.startswith("[") or text.startswith("{"):
+        try:
+            import json
+            data = json.loads(text)
+            if isinstance(data, list):
+                return pd.DataFrame(data)
+            elif isinstance(data, dict):
+                for k in ["transactions", "data", "statement", "items", "records", "rows", "response"]:
+                    if k in data and isinstance(data[k], list):
+                        return pd.DataFrame(data[k])
+                return pd.DataFrame([data])
+        except Exception:
+            pass  # Fall back to CSV parsing if not valid JSON
+
     lines = text.splitlines()
 
     # Financial keywords indicating a table header row
@@ -360,6 +375,15 @@ def parse_and_process_statement(
     # Standardize column headers: lowercase & strip
     raw_df.columns = [str(c).strip().lower() for c in raw_df.columns]
 
+    # Non-amount disqualifier tokens:
+    # Columns containing these tokens represent accounts, instruments, cards, modes, IDs, or metadata
+    # and must NEVER be treated as debit or amount columns.
+    NON_AMOUNT_TOKENS = [
+        "instrument", "account", "acc", "card", "mode", "type", "id", "utr",
+        "ref", "reference", "status", "channel", "balance", "bal", "particulars",
+        "details", "narration", "description", "remarks", "date", "time", "merchant", "payee"
+    ]
+
     # 1. Identify Date column
     date_col = None
     for c in raw_df.columns:
@@ -372,46 +396,99 @@ def parse_and_process_statement(
     # 2. Identify Narration / Description column
     desc_col = None
     for c in raw_df.columns:
-        if any(term in c for term in ["narration", "description", "details", "remarks", "particulars", "merchant"]):
-            desc_col = c
-            break
+        if any(term in c for term in ["narration", "description", "details", "remarks", "particulars", "merchant", "payee", "activity", "comment", "note"]):
+            if not any(ex in c for ex in ["amount", "id", "utr", "balance", "type", "instrument", "date", "time"]):
+                desc_col = c
+                break
+    if not desc_col:
+        for c in raw_df.columns:
+            if any(term in c for term in ["details", "description", "narration", "particulars"]):
+                desc_col = c
+                break
     if not desc_col:
         for c in raw_df.columns:
             if c != date_col and raw_df[c].dtype == object:
                 desc_col = c
                 break
 
-    # 3. Identify Debit / Amount column
-    debit_col = None
-    for c in raw_df.columns:
-        if any(term in c for term in ["debit", "withdrawal", "spent", "dr"]):
-            debit_col = c
-            break
-
-    # If no explicit Debit column, check for general 'amount' column
-    if not debit_col:
-        for c in raw_df.columns:
-            if any(term in c for term in ["amount", "txn amount"]):
-                debit_col = c
-                break
-
-    if not debit_col:
-        result["error"] = "Could not find a Debit or Amount column in the CSV."
-        return result
-
-    # Check for separate Credit column to identify non-expenses
-    credit_col = None
-    for c in raw_df.columns:
-        if any(term in c for term in ["credit", "deposit", "cr"]):
-            credit_col = c
-            break
-
-    # Check for Transaction Type column (e.g. PhonePe DEBIT vs CREDIT)
+    # 3. Identify Transaction Type column (e.g. PhonePe DEBIT vs CREDIT)
     txn_type_col = None
     for c in raw_df.columns:
-        if any(term in c for term in ["transaction type", "txn type"]):
-            txn_type_col = c
+        if any(term in c for term in ["transaction type", "txn type", "cr/dr", "dr/cr"]):
+            if not any(ex in c for ex in ["instrument", "account", "card"]):
+                txn_type_col = c
+                break
+    if not txn_type_col:
+        for c in raw_df.columns:
+            if c in ["type", "txn_type"]:
+                txn_type_col = c
+                break
+
+    # 4. Identify Payment Instrument / Mode column (e.g. PhonePe "Credit/debit instrument", "Payment Mode")
+    instrument_col = None
+    for c in raw_df.columns:
+        if any(term in c for term in ["instrument", "payment mode", "mode", "payment method", "channel"]):
+            instrument_col = c
             break
+
+    # 5. Dedicated Debit column (explicit withdrawal/debit amount)
+    debit_col = None
+    for c in raw_df.columns:
+        if any(term in c for term in ["debit amount", "withdrawal amount", "debit amt", "withdrawal amt", "dr amount", "dr amt", "spent"]):
+            if not any(ex in c for ex in NON_AMOUNT_TOKENS):
+                debit_col = c
+                break
+    if not debit_col:
+        for c in raw_df.columns:
+            if c in ["debit", "withdrawal", "dr"]:
+                debit_col = c
+                break
+    if not debit_col:
+        for c in raw_df.columns:
+            if any(term in c for term in ["debit", "withdrawal"]):
+                if not any(ex in c for ex in NON_AMOUNT_TOKENS):
+                    debit_col = c
+                    break
+
+    # 6. Check for separate Credit column to identify non-expenses
+    credit_col = None
+    for c in raw_df.columns:
+        if any(term in c for term in ["credit amount", "deposit amount", "credit amt", "deposit amt", "cr amount", "cr amt"]):
+            if not any(ex in c for ex in NON_AMOUNT_TOKENS):
+                credit_col = c
+                break
+    if not credit_col:
+        for c in raw_df.columns:
+            if c in ["credit", "deposit", "cr"]:
+                credit_col = c
+                break
+    if not credit_col:
+        for c in raw_df.columns:
+            if any(term in c for term in ["credit", "deposit"]):
+                if not any(ex in c for ex in NON_AMOUNT_TOKENS):
+                    credit_col = c
+                    break
+
+    # 7. General Amount column (e.g. PhonePe "Amount", GPay "Amount")
+    amt_col = None
+    for c in raw_df.columns:
+        if c in ["amount", "txn amount", "transaction amount", "amt", "amount (inr)", "amount(inr)", "total amount"]:
+            amt_col = c
+            break
+    if not amt_col:
+        for c in raw_df.columns:
+            if "amount" in c or "amt" in c:
+                if not any(ex in c for ex in NON_AMOUNT_TOKENS):
+                    amt_col = c
+                    break
+
+    # Determine final chosen expense amount column:
+    # Dedicated debit takes precedence if found; otherwise general amount column
+    chosen_amount_col = debit_col if debit_col else amt_col
+
+    if not chosen_amount_col:
+        result["error"] = "Could not find a Debit or Amount column in the statement."
+        return result
 
     cleaned_records: List[Dict[str, Any]] = []
     duplicate_records: List[Dict[str, Any]] = []
@@ -426,16 +503,37 @@ def parse_and_process_statement(
                 result["credits_skipped"] += 1
                 continue
 
-        # Check credit: if debit is empty/zero and credit is present, skip (it's income/deposit)
-        debit_val = row.get(debit_col, "")
-        if pd.isna(debit_val) or str(debit_val).strip() == "":
+        # Check explicit credit column if present: if credit is positive and debit is zero/empty, skip
+        if credit_col:
+            cr_raw = str(row.get(credit_col, "") or "").strip()
+            clean_cr = re.sub(r"[^\d.]", "", cr_raw)
+            try:
+                cr_val = float(clean_cr)
+                deb_raw = str(row.get(chosen_amount_col, "") or "").strip()
+                clean_deb = re.sub(r"[^\d.]", "", deb_raw)
+                deb_val = float(clean_deb) if clean_deb else 0.0
+                if cr_val > 0 and deb_val == 0.0:
+                    result["credits_skipped"] += 1
+                    continue
+            except (ValueError, TypeError):
+                pass
+
+        # Check debit/amount value
+        amt_raw = row.get(chosen_amount_col, "")
+        if pd.isna(amt_raw) or str(amt_raw).strip() == "":
+            result["credits_skipped"] += 1
+            continue
+
+        raw_amt_str = str(amt_raw).strip()
+        # If amount string explicitly ends with CR (e.g. "500.00 CR"), it's a credit deposit
+        if raw_amt_str.upper().endswith("CR"):
             result["credits_skipped"] += 1
             continue
 
         # Parse numerical amount
         try:
             # Remove currency symbols and commas e.g. "₹ 1,234.50"
-            clean_amt_str = re.sub(r"[^\d.]", "", str(debit_val))
+            clean_amt_str = re.sub(r"[^\d.]", "", raw_amt_str)
             amount = float(clean_amt_str)
             if amount <= 0:
                 result["credits_skipped"] += 1
@@ -451,10 +549,26 @@ def parse_and_process_statement(
 
         # Parse narration & merchant
         raw_narration = str(row.get(desc_col, "") or "")
-        if "received from" in raw_narration.lower():
+        lower_narr = raw_narration.lower()
+        if any(term in lower_narr for term in ["received from", "refund from", "cashback from", "interest credited", "salary credit"]):
             result["credits_skipped"] += 1
             continue
-        merchant, pay_method = extract_merchant_from_narration(raw_narration)
+        merchant, inferred_pm = extract_merchant_from_narration(raw_narration)
+
+        # Payment method determination: prefer instrument column if available
+        pay_method = inferred_pm
+        if instrument_col:
+            inst_str = str(row.get(instrument_col, "") or "").strip().upper()
+            if "CREDIT CARD" in inst_str or "CC" in inst_str:
+                pay_method = "Credit Card"
+            elif "DEBIT CARD" in inst_str or "DC" in inst_str:
+                pay_method = "Debit Card"
+            elif "NET BANKING" in inst_str or "NETBANKING" in inst_str or "INB" in inst_str:
+                pay_method = "Net Banking"
+            elif "CASH" in inst_str:
+                pay_method = "Cash"
+            elif "UPI" in inst_str or "PAID BY XXXXXX" in inst_str or "CREDITED TO XXXXXX" in inst_str:
+                pay_method = "UPI"
 
         # Categorize
         category, source = categorize(merchant, classifier=classifier, use_ml=use_ml)
