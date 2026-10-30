@@ -80,16 +80,22 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* Main Canvas Background */
+    /* Main Canvas Background & Typography */
     .stApp {
         background-color: #f8fafc;
         color: #0f172a;
+        font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
     }
 
-    /* Sidebar Dark Navigation */
+    /* Tabular Numerals for Financial Data */
+    .tabular-nums, .stat-value, .hero-value, .strip-value, [data-testid="stMetricValue"] {
+        font-variant-numeric: tabular-nums !important;
+    }
+
+    /* Sidebar Refined Dark Navigation */
     [data-testid="stSidebar"] {
-        background-color: #0f172a !important;
-        border-right: 1px solid #1e293b;
+        background-color: #090d16 !important;
+        border-right: 1px solid #192231 !important;
     }
     [data-testid="stSidebar"] p,
     [data-testid="stSidebar"] span,
@@ -106,7 +112,7 @@ st.markdown(
         display: none !important;
     }
 
-    /* 2. Full-width consistent Navigation Buttons in Sidebar */
+    /* 2. Consistent Navigation Items in Sidebar */
     [data-testid="stSidebar"] [data-testid="stRadio"] {
         width: 100% !important;
     }
@@ -114,14 +120,14 @@ st.markdown(
         width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
-        gap: 8px !important;
+        gap: 4px !important;
     }
     [data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] > label {
         width: 100% !important;
-        background-color: #1e293b !important;
-        border: 1px solid #334155 !important;
+        background-color: transparent !important;
+        border: 1px solid transparent !important;
         border-radius: 8px !important;
-        padding: 10px 14px !important;
+        padding: 9px 12px !important;
         margin: 0 !important;
         display: flex !important;
         align-items: center !important;
@@ -130,20 +136,19 @@ st.markdown(
         transition: all 0.15s ease-in-out !important;
     }
     [data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] > label:hover {
-        background-color: #273549 !important;
-        border-color: #475569 !important;
+        background-color: #151d2c !important;
     }
     /* Active selected navigation item */
     [data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] > label:has(input:checked) {
-        background-color: #0284c7 !important;
-        border-color: #0284c7 !important;
+        background-color: #1e293b !important;
+        border: 1px solid #334155 !important;
     }
     [data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] > label p,
     [data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] > label span,
     [data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] > label div {
         color: #ffffff !important;
         font-weight: 500 !important;
-        font-size: 13.5px !important;
+        font-size: 13px !important;
     }
 
     /* 3. Sidebar Date Input - Dark Slate Box matching Sidebar Navigation */
@@ -154,14 +159,14 @@ st.markdown(
     [data-testid="stSidebar"] [data-testid="stDateInput"] div[data-baseweb="input"],
     [data-testid="stSidebar"] [data-testid="stDateInput"] div[data-baseweb="base-input"],
     [data-testid="stSidebar"] [data-testid="stDateInput"] [data-range-field] {
-        background-color: #1e293b !important;
-        border: 1px solid #334155 !important;
+        background-color: #131b2a !important;
+        border: 1px solid #233147 !important;
         border-radius: 8px !important;
         width: 100% !important;
         color: #f8fafc !important;
     }
 
-    /* All segments, spinbuttons, placeholders and literals inside Sidebar Date Input */
+    /* Segments inside Sidebar Date Input */
     [data-testid="stSidebar"] [data-testid="stDateInput"] *,
     [data-testid="stSidebar"] [data-testid="stDateInput"] [role="spinbutton"],
     [data-testid="stSidebar"] [data-testid="stDateInput"] .react-aria-DateSegment,
@@ -174,16 +179,15 @@ st.markdown(
         color: #f8fafc !important;
         -webkit-text-fill-color: #f8fafc !important;
         font-weight: 500 !important;
-        font-size: 13.5px !important;
+        font-size: 13px !important;
     }
 
-    /* Calendar icon inside date picker */
     [data-testid="stSidebar"] [data-testid="stDateInput"] svg {
         fill: #94a3b8 !important;
         color: #94a3b8 !important;
     }
 
-    /* Date Picker Popover Calendar (White card with dark legible dates) */
+    /* Date Picker Popover Calendar */
     div[data-baseweb="popover"],
     div[data-testid="stDateInputCalendar"],
     div[data-testid="stDateInputCalendar"] * {
@@ -192,22 +196,22 @@ st.markdown(
         -webkit-text-fill-color: #0f172a !important;
     }
     div[data-testid="stDateInputCalendar"] [data-selected] {
-        background-color: #0284c7 !important;
+        background-color: #2563eb !important;
         color: #ffffff !important;
         -webkit-text-fill-color: #ffffff !important;
     }
 
-    /* 4. Sidebar Expander & Buttons (Full width, dark block with clear white text) */
+    /* 4. Sidebar Expander & Buttons */
     [data-testid="stSidebar"] [data-testid="stExpander"] {
-        background-color: #1e293b !important;
-        border: 1px solid #334155 !important;
+        background-color: #131b2a !important;
+        border: 1px solid #233147 !important;
         border-radius: 8px !important;
         width: 100% !important;
     }
     [data-testid="stSidebar"] [data-testid="stExpander"] summary {
-        color: #ffffff !important;
+        color: #e2e8f0 !important;
         font-weight: 600 !important;
-        font-size: 13px !important;
+        font-size: 12.5px !important;
     }
     [data-testid="stSidebar"] [data-testid="stExpander"] summary svg {
         fill: #94a3b8 !important;
@@ -218,13 +222,13 @@ st.markdown(
     }
     [data-testid="stSidebar"] .stButton > button {
         width: 100% !important;
-        background-color: #0f172a !important;
+        background-color: #1e293b !important;
         color: #ffffff !important;
         border: 1px solid #334155 !important;
         border-radius: 8px !important;
-        padding: 9px 14px !important;
-        font-size: 13px !important;
-        font-weight: 600 !important;
+        padding: 8px 12px !important;
+        font-size: 12.5px !important;
+        font-weight: 500 !important;
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
@@ -232,7 +236,7 @@ st.markdown(
         transition: all 0.15s ease-in-out !important;
     }
     [data-testid="stSidebar"] .stButton > button:hover {
-        background-color: #1e293b !important;
+        background-color: #273549 !important;
         border-color: #475569 !important;
         color: #ffffff !important;
     }
@@ -243,90 +247,251 @@ st.markdown(
 
     /* Top Page Header */
     .page-title {
-        font-size: 26px;
-        font-weight: 800;
+        font-size: 24px;
+        font-weight: 700;
         color: #0f172a;
         margin-bottom: 2px;
-        letter-spacing: -0.5px;
+        letter-spacing: -0.4px;
     }
     .page-subtitle {
         font-size: 13.5px;
         color: #64748b;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
     }
 
-    /* Blocky Stat Card Grid */
-    .stat-card {
+    /* Hero Outflow Card */
+    .hero-card {
         background-color: #ffffff;
         border: 1px solid #e2e8f0;
-        border-radius: 8px;
-        padding: 16px 18px;
-        margin-bottom: 12px;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
-        min-height: 104px;
+        border-radius: 12px;
+        padding: 22px 24px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    .stat-value {
-        font-size: 22px;
-        font-weight: 800;
-        color: #0f172a;
-        line-height: 1.15;
+    .hero-eyebrow {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        color: #64748b;
         margin-bottom: 4px;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .hero-value {
+        font-size: 36px;
+        font-weight: 700;
+        color: #0f172a;
+        letter-spacing: -0.8px;
+        line-height: 1.1;
+        margin: 4px 0 10px 0;
+        font-variant-numeric: tabular-nums;
+    }
+    .hero-meta-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        font-size: 12.5px;
+        color: #64748b;
+    }
+    .badge-delta-pos {
+        background-color: #ecfdf5;
+        color: #065f46;
+        border: 1px solid #a7f3d0;
+        padding: 2px 8px;
+        border-radius: 6px;
+        font-size: 11.5px;
+        font-weight: 600;
+    }
+    .badge-delta-neg {
+        background-color: #fef2f2;
+        color: #991b1b;
+        border: 1px solid #fecaca;
+        padding: 2px 8px;
+        border-radius: 6px;
+        font-size: 11.5px;
+        font-weight: 600;
+    }
+    .badge-delta-neutral {
+        background-color: #f1f5f9;
+        color: #475569;
+        border: 1px solid #e2e8f0;
+        padding: 2px 8px;
+        border-radius: 6px;
+        font-size: 11.5px;
+        font-weight: 600;
+    }
+
+    /* Status Tile (Right of Hero) */
+    .status-card {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 13px 16px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+    }
+    .status-card-label {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #64748b;
+        margin-bottom: 2px;
+    }
+    .status-card-value {
+        font-size: 17px;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 2px;
+        font-variant-numeric: tabular-nums;
+    }
+    .status-card-sub {
+        font-size: 11.5px;
+        color: #94a3b8;
+    }
+
+    /* 4-Column Secondary Metrics Strip */
+    .strip-card {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 14px 16px;
+        margin-bottom: 14px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+    }
+    .strip-label {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #64748b;
+        margin-bottom: 4px;
+    }
+    .strip-value {
+        font-size: 17px;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 2px;
+        font-variant-numeric: tabular-nums;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    .stat-label {
+    .strip-sub {
         font-size: 11.5px;
-        font-weight: 600;
-        color: #64748b;
-        text-transform: uppercase;
-        letter-spacing: 0.4px;
-    }
-    .stat-subtext {
-        font-size: 11px;
         color: #94a3b8;
-        margin-top: 2px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
-    /* Stat Card Action Buttons (Clean interactive pills below cards) */
-    div[class*="st-key-dash_act_btn"] {
-        margin-top: -6px !important;
-        margin-bottom: 8px !important;
+    /* Quick Action Jump Bar */
+    .jump-bar-label {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #94a3b8;
+        margin-bottom: 6px;
     }
     div[class*="st-key-dash_act_btn"] button {
         background-color: #ffffff !important;
-        border: 1px solid #cbd5e1 !important;
-        color: #0284c7 !important;
-        font-size: 11.5px !important;
-        font-weight: 600 !important;
-        padding: 4px 8px !important;
+        border: 1px solid #e2e8f0 !important;
+        color: #334155 !important;
+        font-size: 12px !important;
+        font-weight: 500 !important;
+        padding: 6px 12px !important;
         border-radius: 6px !important;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02) !important;
         transition: all 0.15s ease-in-out !important;
     }
     div[class*="st-key-dash_act_btn"] button:hover {
-        background-color: #f0f9ff !important;
-        border-color: #0284c7 !important;
-        color: #0369a1 !important;
+        background-color: #f8fafc !important;
+        border-color: #cbd5e1 !important;
+        color: #0f172a !important;
+    }
+
+    /* Plain-English Insight Cards (Page 3) */
+    .insight-card {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 14px 16px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+        height: 100%;
+    }
+    .insight-badge {
+        background-color: #eff6ff;
+        color: #1d4ed8;
+        font-size: 10.5px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-radius: 4px;
+        padding: 2px 6px;
+        display: inline-block;
+        margin-bottom: 6px;
+    }
+    .insight-title {
+        font-size: 13px;
+        font-weight: 600;
+        color: #0f172a;
+        margin-bottom: 4px;
+    }
+    .insight-body {
+        font-size: 12px;
+        color: #475569;
+        line-height: 1.45;
     }
 
     /* Card Title */
     .card-title {
-        font-size: 16px;
-        font-weight: 700;
+        font-size: 14.5px;
+        font-weight: 600;
         color: #0f172a;
+        letter-spacing: -0.2px;
         margin-top: 0;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
         display: flex;
         align-items: center;
         gap: 6px;
+    }
+
+    /* Container Surface Overrides */
+    div[data-testid="stVerticalBlockBorderWrapper"] {
+        background-color: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 12px !important;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02) !important;
+        padding: 18px 20px !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* Streamlit Native Metric Overrides */
+    [data-testid="stMetric"] {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 12px 16px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+    }
+    [data-testid="stMetricLabel"] {
+        font-size: 11px !important;
+        font-weight: 600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        color: #64748b !important;
+    }
+    [data-testid="stMetricValue"] {
+        font-size: 20px !important;
+        font-weight: 700 !important;
+        color: #0f172a !important;
     }
 
     /* Streamlit Form & Input Styling */
@@ -335,26 +500,39 @@ st.markdown(
         border: 1px solid #cbd5e1 !important;
         background-color: #ffffff !important;
         color: #0f172a !important;
+        font-size: 13.5px !important;
+    }
+
+    /* Segmented Control & Radio Styling */
+    div[data-testid="stSegmentedControl"] {
+        background-color: #f1f5f9 !important;
+        border-radius: 8px !important;
+        padding: 3px !important;
     }
 
     /* Tabs Styling */
     .stTabs [data-baseweb="tab-list"] {
-        gap: 8px;
-        background-color: transparent;
+        gap: 4px;
+        background-color: #f1f5f9;
+        padding: 4px;
+        border-radius: 8px;
+        margin-bottom: 14px;
     }
     .stTabs [data-baseweb="tab"] {
         border-radius: 6px;
-        background-color: #ffffff;
-        border: 1px solid #e2e8f0;
-        padding: 8px 18px;
-        font-weight: 600;
+        background-color: transparent;
+        border: none;
+        padding: 7px 16px;
+        font-weight: 500;
         font-size: 13px;
-        color: #475569;
+        color: #64748b;
+        transition: all 0.15s ease-in-out;
     }
     .stTabs [aria-selected="true"] {
-        background-color: #0284c7 !important;
-        color: #ffffff !important;
-        border-color: #0284c7 !important;
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+        font-weight: 600 !important;
     }
     </style>
     """,
@@ -506,9 +684,9 @@ with st.sidebar.expander("🛠️ Database Controls"):
 # ============================================================================
 
 if page == "📊 Dashboard":
-    st.markdown('<div class="page-title">Expense tracker</div>', unsafe_allow_html=True)
+    st.markdown('<div class="page-title">Dashboard</div>', unsafe_allow_html=True)
     st.markdown(
-        '<div class="page-subtitle">Schedule-based analytics & financial overview -- track spending, budgets, and habits.</div>',
+        '<div class="page-subtitle">Outflow summary, category analytics, and budget health.</div>',
         unsafe_allow_html=True,
     )
 
@@ -530,176 +708,172 @@ if page == "📊 Dashboard":
         dominant_pct = f"{round(comp_pay.iloc[0] / len(filtered_df) * 100)}%" if not comp_pay.empty else "0%"
 
         # ====================================================================
-        # 8 Metric Cards Grid
+        # 1. PRIMARY HERO FINANCIAL SUMMARY & STATUS HIGHLIGHTS
         # ====================================================================
-        r1_c1, r1_c2, r1_c3, r1_c4 = st.columns(4)
-        with r1_c1:
+        mom_val = kpis["mom_change_pct"]
+        if mom_val < 0:
+            mom_badge = f'<span class="badge-delta-pos">{mom_val:+.1f}% vs last month</span>'
+        elif mom_val > 0:
+            mom_badge = f'<span class="badge-delta-neg">{mom_val:+.1f}% vs last month</span>'
+        else:
+            mom_badge = '<span class="badge-delta-neutral">0.0% MoM</span>'
+
+        target_m_display = kpis["target_month"] or "Current Period"
+
+        hero_col, status_col = st.columns([58, 42])
+
+        with hero_col:
             st.markdown(
                 f"""
-                <div class="stat-card">
-                    <div class="stat-value">{format_inr(kpis['total_this_month'])}</div>
-                    <div class="stat-label">Total Outflow (Month)</div>
-                    <div class="stat-subtext">Target: {kpis['target_month']} ({kpis['mom_change_pct']:+.1f}% MoM)</div>
+                <div class="hero-card">
+                    <div class="hero-eyebrow">Total Outflow &bull; {target_m_display}</div>
+                    <div class="hero-value">{format_inr(kpis['total_this_month'])}</div>
+                    <div class="hero-meta-row">
+                        {mom_badge}
+                        <span>Daily Average: <strong>{format_inr(kpis['avg_daily_spend'])}</strong></span>
+                        <span>&bull;</span>
+                        <span>All-time Volume: <strong>{format_inr(kpis['total_spend_all_time'])}</strong></span>
+                    </div>
                 </div>
                 """,
                 unsafe_allow_html=True,
             )
+
+        with status_col:
+            anom_cnt = len(anomalies_df)
+            anom_color = "#dc2626" if anom_cnt > 0 else "#16a34a"
+            anom_text = f"{anom_cnt} Flagged Anomalies" if anom_cnt > 0 else "All Normal"
+            anom_sub = "Exceeding 2.5σ baseline" if anom_cnt > 0 else "Zero outliers detected"
+
+            st.markdown(
+                f"""
+                <div class="status-card">
+                    <div class="status-card-label">Outlier Intelligence</div>
+                    <div class="status-card-value" style="color: {anom_color};">{anom_text}</div>
+                    <div class="status-card-sub">{anom_sub}</div>
+                </div>
+                <div class="status-card">
+                    <div class="status-card-label">Next Month Forecast (3M WMA)</div>
+                    <div class="status-card-value" style="color: #2563eb;">{format_inr(forecast_res['total_forecast'])}</div>
+                    <div class="status-card-sub">Projected for {forecast_res['forecast_month']}</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+        # ====================================================================
+        # 2. COMPACT SECONDARY METRICS STRIP
+        # ====================================================================
+        st_c1, st_c2, st_c3, st_c4 = st.columns(4)
+        with st_c1:
+            st.markdown(
+                f"""
+                <div class="strip-card">
+                    <div class="strip-label">Total Transactions</div>
+                    <div class="strip-value">{kpis['total_transactions']}</div>
+                    <div class="strip-sub">{format_inr(kpis['total_spend_all_time'])} total volume</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+        with st_c2:
+            st.markdown(
+                f"""
+                <div class="strip-card">
+                    <div class="strip-label">Dominant Payment</div>
+                    <div class="strip-value">{dominant_pm}</div>
+                    <div class="strip-sub">Used in {dominant_pct} of expenses</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+        with st_c3:
+            st.markdown(
+                f"""
+                <div class="strip-card">
+                    <div class="strip-label">Top Category</div>
+                    <div class="strip-value" title="{top_cat_name}">{top_cat_name}</div>
+                    <div class="strip-sub">{top_cat_amt} spent</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+        with st_c4:
+            st.markdown(
+                f"""
+                <div class="strip-card">
+                    <div class="strip-label">Largest Expense</div>
+                    <div class="strip-value">{format_inr(kpis['biggest_expense_amount'])}</div>
+                    <div class="strip-sub" title="{kpis['biggest_expense_merchant']}">{kpis['biggest_expense_merchant'][:25]}</div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+        # ====================================================================
+        # 3. QUIET QUICK-ACTION JUMP BAR
+        # ====================================================================
+        st.markdown('<div class="jump-bar-label">Quick Actions & Shortcuts</div>', unsafe_allow_html=True)
+        ja_c1, ja_c2, ja_c3, ja_c4, ja_c5, ja_c6 = st.columns([1, 1, 1.2, 1.2, 1.1, 1.4])
+        with ja_c1:
             with st.container(key="dash_act_btn_r1c1"):
                 st.button(
-                    "📋 Open Ledger →",
+                    "📋 Ledger",
                     key="btn_goto_crud_r1c1",
                     on_click=navigate_to,
                     args=("💳 Expenses (CRUD)",),
                     use_container_width=True,
                 )
-
-        with r1_c2:
-            st.markdown(
-                f"""
-                <div class="stat-card">
-                    <div class="stat-value">{format_inr(kpis['avg_daily_spend'])}</div>
-                    <div class="stat-label">Daily Average</div>
-                    <div class="stat-subtext">Calculated across active days</div>
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
+        with ja_c2:
             with st.container(key="dash_act_btn_r1c2"):
                 st.button(
-                    "📅 View Habits →",
+                    "➕ Add Expense",
                     key="btn_goto_habits_r1c2",
                     on_click=navigate_to,
                     args=("💳 Expenses (CRUD)",),
                     use_container_width=True,
                 )
-
-        with r1_c3:
-            st.markdown(
-                f"""
-                <div class="stat-card">
-                    <div class="stat-value">{kpis['total_transactions']}</div>
-                    <div class="stat-label">Total Transactions</div>
-                    <div class="stat-subtext">{format_inr(kpis['total_spend_all_time'])} total volume</div>
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
-            with st.container(key="dash_act_btn_r1c3"):
+        with ja_c3:
+            with st.container(key="dash_act_btn_r2c3"):
                 st.button(
-                    "📋 View Transactions →",
-                    key="btn_goto_crud_r1c3",
+                    f"🚨 Anomalies ({len(anomalies_df)})",
+                    key="btn_goto_anom",
                     on_click=navigate_to,
-                    args=("💳 Expenses (CRUD)",),
+                    args=("💡 Smart Insights", "anomalies"),
                     use_container_width=True,
                 )
-
-        with r1_c4:
-            st.markdown(
-                f"""
-                <div class="stat-card">
-                    <div class="stat-value">{dominant_pm}</div>
-                    <div class="stat-label">Dominant Payment Method</div>
-                    <div class="stat-subtext">Used in {dominant_pct} of all expenses</div>
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
+        with ja_c4:
+            with st.container(key="dash_act_btn_r2c4"):
+                st.button(
+                    "📈 Forecast Model",
+                    key="btn_goto_fc",
+                    on_click=navigate_to,
+                    args=("💡 Smart Insights", "forecast"),
+                    use_container_width=True,
+                )
+        with ja_c5:
             with st.container(key="dash_act_btn_r1c4"):
                 st.button(
-                    "🕸️ Centrality Graph →",
+                    "🕸️ Network Graph",
                     key="btn_goto_graph_r1c4",
                     on_click=navigate_to,
                     args=("🕸️ Spending Graph",),
                     use_container_width=True,
                 )
-
-        r2_c1, r2_c2, r2_c3, r2_c4 = st.columns(4)
-        with r2_c1:
-            st.markdown(
-                f"""
-                <div class="stat-card">
-                    <div class="stat-value" title="{top_cat_name}">{top_cat_name}</div>
-                    <div class="stat-label">Top Spending Category</div>
-                    <div class="stat-subtext">{top_cat_amt} spent</div>
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
-            with st.container(key="dash_act_btn_r2c1"):
-                st.button(
-                    "🕸️ Category Graph →",
-                    key="btn_goto_graph_r2c1",
-                    on_click=navigate_to,
-                    args=("🕸️ Spending Graph",),
-                    use_container_width=True,
-                )
-
-        with r2_c2:
-            st.markdown(
-                f"""
-                <div class="stat-card">
-                    <div class="stat-value">{format_inr(kpis['biggest_expense_amount'])}</div>
-                    <div class="stat-label">Largest Single Expense</div>
-                    <div class="stat-subtext">{kpis['biggest_expense_merchant'][:25]}</div>
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
+        with ja_c6:
             with st.container(key="dash_act_btn_r2c2"):
                 st.button(
-                    "🔍 Search Big Expense →",
+                    f"🔍 Find '{kpis['biggest_expense_merchant'][:14]}'",
                     key="btn_goto_search_r2c2",
                     on_click=navigate_to,
                     args=("💳 Expenses (CRUD)", None, kpis["biggest_expense_merchant"]),
                     use_container_width=True,
                 )
 
-        with r2_c3:
-            st.markdown(
-                f"""
-                <div class="stat-card">
-                    <div class="stat-value" style="color: {'#dc2626' if len(anomalies_df) > 0 else '#16a34a'};">
-                        {len(anomalies_df)} Flagged
-                    </div>
-                    <div class="stat-label">Anomalies Detected</div>
-                    <div class="stat-subtext">Exceeding 2.5σ category baseline</div>
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
-            with st.container(key="dash_act_btn_r2c3"):
-                st.button(
-                    f"🚨 Inspect {len(anomalies_df)} Anomalies →",
-                    key="btn_goto_anom",
-                    on_click=navigate_to,
-                    args=("💡 Smart Insights", "anomalies"),
-                    use_container_width=True,
-                )
-
-        with r2_c4:
-            st.markdown(
-                f"""
-                <div class="stat-card">
-                    <div class="stat-value" style="color: #0284c7;">{format_inr(forecast_res['total_forecast'])}</div>
-                    <div class="stat-label">Next Month Forecast</div>
-                    <div class="stat-subtext">Projected for {forecast_res['forecast_month']} (3M WMA)</div>
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
-            with st.container(key="dash_act_btn_r2c4"):
-                st.button(
-                    "📈 Forecast Model Breakdown →",
-                    key="btn_goto_fc",
-                    on_click=navigate_to,
-                    args=("💡 Smart Insights", "forecast"),
-                    use_container_width=True,
-                )
-
         # ====================================================================
         # ROW 1 OF VISUALS: Trend Line & Category Donut
         # ====================================================================
-        ch_c1, ch_c2 = st.columns([5, 4])
+        ch_c1, ch_c2 = st.columns([7, 5])
         with ch_c1:
             with st.container(border=True):
                 head_col1, head_col2 = st.columns([3, 2])
@@ -1115,11 +1289,13 @@ elif page == "🕸️ Spending Graph":
         ins_cols = st.columns(len(insights))
         for col, ins in zip(ins_cols, insights):
             with col:
+                badge_text = ins.get("badge", "Network Insight")
                 st.markdown(
                     f"""
-                    <div class="stat-card">
-                        <div class="stat-label">{ins['title']}</div>
-                        <div style="font-size: 13.5px; color: #1e293b; margin-top: 4px;">{ins['text']}</div>
+                    <div class="insight-card">
+                        <span class="insight-badge">{badge_text}</span>
+                        <div class="insight-title">{ins['title']}</div>
+                        <div class="insight-body">{ins['text']}</div>
                     </div>
                     """,
                     unsafe_allow_html=True,
@@ -1209,9 +1385,39 @@ elif page == "💡 Smart Insights":
 
             fc_data = calculate_wma_forecast(all_exp_data)
             f1, f2, f3 = st.columns(3)
-            f1.metric("Forecast Target Month", fc_data["forecast_month"])
-            f2.metric("Projected Total Spend", format_inr(fc_data["total_forecast"]))
-            f3.metric("Weights Applied", "20% (M-3), 30% (M-2), 50% (M-1)")
+            with f1:
+                st.markdown(
+                    f"""
+                    <div class="strip-card">
+                        <div class="strip-label">Forecast Target Month</div>
+                        <div class="strip-value">{fc_data['forecast_month']}</div>
+                        <div class="strip-sub">Upcoming evaluation period</div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True,
+                )
+            with f2:
+                st.markdown(
+                    f"""
+                    <div class="strip-card">
+                        <div class="strip-label">Projected Total Outflow</div>
+                        <div class="strip-value" style="color: #2563eb;">{format_inr(fc_data['total_forecast'])}</div>
+                        <div class="strip-sub">3-Month WMA projection</div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True,
+                )
+            with f3:
+                st.markdown(
+                    """
+                    <div class="strip-card">
+                        <div class="strip-label">Recency Weights Applied</div>
+                        <div class="strip-value">20% · 30% · 50%</div>
+                        <div class="strip-sub">M-3 (0.2), M-2 (0.3), M-1 (0.5)</div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True,
+                )
 
             tr_df = get_monthly_trend(all_exp_data)
             fc_ext_df = pd.DataFrame([{"month": fc_data["forecast_month"], "forecast_amount": fc_data["total_forecast"]}])
@@ -1263,6 +1469,37 @@ elif page == "💡 Smart Insights":
             final_cat, src = categorize(test_query, classifier=clf, use_ml=enable_ml)
 
             t1, t2, t3 = st.columns(3)
-            t1.metric("Rule Result", rule_out or "None")
-            t2.metric("ML Result", clf.predict(test_query) if clf.is_trained else "Not Trained")
-            t3.metric("Resolved Category", final_cat, help=f"Resolved via {src}")
+            with t1:
+                st.markdown(
+                    f"""
+                    <div class="strip-card">
+                        <div class="strip-label">Rule-Based Prediction</div>
+                        <div class="strip-value">{rule_out or 'None'}</div>
+                        <div class="strip-sub">Deterministic keyword rules</div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True,
+                )
+            with t2:
+                ml_res = clf.predict(test_query) if clf.is_trained else "Not Trained"
+                st.markdown(
+                    f"""
+                    <div class="strip-card">
+                        <div class="strip-label">ML Model Prediction</div>
+                        <div class="strip-value">{ml_res}</div>
+                        <div class="strip-sub">TF-IDF + Logistic Regression</div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True,
+                )
+            with t3:
+                st.markdown(
+                    f"""
+                    <div class="strip-card">
+                        <div class="strip-label">Resolved Category</div>
+                        <div class="strip-value" style="color: #2563eb;">{final_cat}</div>
+                        <div class="strip-sub">Resolved via {src}</div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True,
+                )

@@ -203,10 +203,10 @@ def create_network_plotly_figure(
     edge_trace = go.Scatter(
         x=edge_x,
         y=edge_y,
-        line=dict(width=1.0, color="#cccccc"),
+        line=dict(width=0.8, color="#cbd5e1"),
         hoverinfo="none",
         mode="lines",
-        opacity=0.6,
+        opacity=0.5,
         showlegend=False,
     )
 
@@ -220,15 +220,15 @@ def create_network_plotly_figure(
 
     # Color palettes
     type_color_map = {
-        "Category": "#1f77b4",        # Blue
-        "Merchant": "#2ca02c",        # Green
-        "Payment Method": "#ff7f0e",  # Orange
-        "Unknown": "#7f7f7f",
+        "Category": "#2563eb",        # Slate Blue
+        "Merchant": "#10b981",        # Emerald
+        "Payment Method": "#f59e0b",  # Amber
+        "Unknown": "#94a3b8",
     }
 
     cluster_palette = [
-        "#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd",
-        "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"
+        "#2563eb", "#10b981", "#f59e0b", "#6366f1", "#ec4899",
+        "#0ea5e9", "#8b5cf6", "#14b8a6", "#64748b", "#f97316"
     ]
 
     for node in G.nodes():
@@ -264,10 +264,10 @@ def create_network_plotly_figure(
             f"<b>{node}</b><br>"
             f"<b>Type:</b> {ntype}<br>"
             f"<b>Total Volume:</b> {format_inr(spend)}<br>"
-            f"<b>Connections (Degree):</b> {degree}<br>"
+            f"<b>Connections:</b> {degree}<br>"
             f"<b>Degree Centrality:</b> {deg_c}<br>"
             f"<b>Betweenness Centrality:</b> {bet_c}<br>"
-            f"<b>Community:</b> {m.get('community_name', 'N/A')}"
+            f"<b>Cluster:</b> {m.get('community_name', 'N/A')}"
         )
         node_text.append(tooltip)
 
@@ -279,7 +279,7 @@ def create_network_plotly_figure(
         text=node_labels,
         textposition="top center",
         hovertext=node_text,
-        textfont=dict(size=9, color="#222222"),
+        textfont=dict(size=10, family="Inter, -apple-system, sans-serif", color="#1e293b"),
         marker=dict(
             showscale=False,
             color=node_colors,
@@ -293,14 +293,16 @@ def create_network_plotly_figure(
     fig = go.Figure(
         data=[edge_trace, node_trace],
         layout=go.Layout(
-            title=f"<b>Financial Spending Graph</b> (Colored by {color_by.replace('_', ' ').title()})",
+            font=dict(family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", size=12, color="#64748b"),
             template="plotly_white",
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
             showlegend=False,
             hovermode="closest",
-            margin=dict(b=20, l=20, r=20, t=50),
+            margin=dict(b=10, l=10, r=10, t=20),
             xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
             yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
-            height=620,
+            height=600,
         ),
     )
 

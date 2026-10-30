@@ -188,7 +188,7 @@ def plot_monthly_trend(
 
     # 1. Historical Actual Spending Line
     hover_actual = [
-        f"<b>Month:</b> {m}<br><b>Actual Spend:</b> {format_inr(amt)}<br><b>Transactions:</b> {cnt}"
+        f"<b>{m}</b><br>Actual Spend: {format_inr(amt)}<br>Transactions: {cnt}"
         for m, amt, cnt in zip(
             trend_df["month"], trend_df["total_amount"], trend_df["transaction_count"]
         )
@@ -200,8 +200,10 @@ def plot_monthly_trend(
             y=trend_df["total_amount"],
             mode="lines+markers",
             name="Actual Spend",
-            line=dict(color="#1f77b4", width=3),
-            marker=dict(size=8, color="#1f77b4"),
+            line=dict(color="#2563eb", width=2.5),
+            marker=dict(size=7, color="#ffffff", line=dict(color="#2563eb", width=2)),
+            fill="tozeroy",
+            fillcolor="rgba(37, 99, 235, 0.04)",
             hoverinfo="text",
             text=hover_actual,
         )
@@ -222,25 +224,26 @@ def plot_monthly_trend(
                 y=[last_actual_amt, forecast_amt],
                 mode="lines+markers",
                 name="3-Month WMA Forecast",
-                line=dict(color="#ff7f0e", width=3, dash="dash"),
-                marker=dict(size=10, symbol="diamond", color="#ff7f0e"),
+                line=dict(color="#64748b", width=2, dash="dot"),
+                marker=dict(size=7, symbol="diamond", color="#64748b"),
                 hoverinfo="text",
                 text=[
                     f"<b>Anchor:</b> {last_actual_month}",
-                    f"<b>Predicted Spend:</b> {format_inr(forecast_amt)}<br><b>Model:</b> Weighted Moving Average",
+                    f"<b>Projected Spend:</b> {format_inr(forecast_amt)}<br><b>Model:</b> 3-Month WMA",
                 ],
             )
         )
 
     fig.update_layout(
-        title="<b>Monthly Spending Trend & Forecast</b>",
-        xaxis_title="Month",
-        yaxis_title="Total Spend (₹)",
-        template="plotly_white",
-        height=380,
+        font=dict(family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", size=12, color="#64748b"),
+        xaxis=dict(gridcolor="#f1f5f9", zerolinecolor="#e2e8f0", showline=False, title_text=""),
+        yaxis=dict(gridcolor="#f1f5f9", zerolinecolor="#e2e8f0", showline=False, title_text="Spend (₹)"),
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        height=340,
         hovermode="closest",
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-        margin=dict(l=40, r=40, t=60, b=40),
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1, font=dict(size=11, color="#64748b")),
+        margin=dict(l=10, r=10, t=25, b=10),
     )
     return fig
 
@@ -278,9 +281,9 @@ def plot_category_donut(
     if cat_df.empty:
         fig = go.Figure()
         fig.add_annotation(
-            text="No data for category chart", showarrow=False, font=dict(size=14)
+            text="No data for category chart", showarrow=False, font=dict(size=13, color="#64748b")
         )
-        fig.update_layout(template="plotly_white", height=380)
+        fig.update_layout(template="plotly_white", height=340, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
         return fig
 
     custom_text = [
@@ -288,26 +291,32 @@ def plot_category_donut(
         for _, row in cat_df.iterrows()
     ]
 
+    palette = [
+        "#2563eb", "#0ea5e9", "#10b981", "#6366f1", "#f59e0b",
+        "#ec4899", "#8b5cf6", "#14b8a6", "#64748b", "#f97316"
+    ]
+
     fig = go.Figure(
         data=[
             go.Pie(
                 labels=cat_df["category"],
                 values=cat_df["amount"],
-                hole=0.45,
+                hole=0.60,
                 textinfo="label+percent",
                 hoverinfo="text",
                 text=custom_text,
-                marker=dict(line=dict(color="#ffffff", width=2)),
+                marker=dict(colors=palette[: len(cat_df)], line=dict(color="#ffffff", width=2)),
             )
         ]
     )
 
     fig.update_layout(
-        title=f"<b>{title}</b>",
-        template="plotly_white",
-        height=380,
+        font=dict(family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", size=11, color="#475569"),
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        height=340,
         showlegend=False,
-        margin=dict(l=20, r=20, t=50, b=20),
+        margin=dict(l=10, r=10, t=20, b=10),
     )
     return fig
 
@@ -332,16 +341,16 @@ def plot_top_merchants(merchants_df: pd.DataFrame) -> go.Figure:
     if merchants_df.empty:
         fig = go.Figure()
         fig.add_annotation(
-            text="No merchant data available", showarrow=False, font=dict(size=14)
+            text="No merchant data available", showarrow=False, font=dict(size=13, color="#64748b")
         )
-        fig.update_layout(template="plotly_white", height=380)
+        fig.update_layout(template="plotly_white", height=340, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
         return fig
 
     # Reverse to have highest on top in horizontal bar
     df_sorted = merchants_df.sort_values(by="amount", ascending=True)
 
     hover_text = [
-        f"<b>{m}</b><br>Total: {format_inr(amt)}<br>Orders: {cnt}"
+        f"<b>{m}</b><br>Total: {format_inr(amt)}<br>Transactions: {cnt}"
         for m, amt, cnt in zip(
             df_sorted["merchant"], df_sorted["amount"], df_sorted["count"]
         )
@@ -352,19 +361,20 @@ def plot_top_merchants(merchants_df: pd.DataFrame) -> go.Figure:
             x=df_sorted["amount"],
             y=df_sorted["merchant"],
             orientation="h",
-            marker=dict(color="#2ca02c"),
+            marker=dict(color="#1e293b", opacity=0.88),
             hoverinfo="text",
             text=hover_text,
         )
     )
 
     fig.update_layout(
-        title="<b>Top 10 Merchants by Total Spend</b>",
-        xaxis_title="Total Spend (₹)",
-        yaxis_title="Merchant",
-        template="plotly_white",
-        height=380,
-        margin=dict(l=40, r=40, t=50, b=40),
+        font=dict(family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", size=12, color="#64748b"),
+        xaxis=dict(gridcolor="#f1f5f9", zerolinecolor="#e2e8f0", showline=False, title_text="Total Spend (₹)"),
+        yaxis=dict(gridcolor="#f1f5f9", zerolinecolor="#e2e8f0", showline=False, title_text=""),
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        height=340,
+        margin=dict(l=10, r=10, t=20, b=10),
     )
     return fig
 
@@ -419,31 +429,36 @@ def plot_weekday_vs_weekend(comp: Dict[str, Any]) -> go.Figure:
     fig = go.Figure(
         data=[
             go.Bar(
-                name=f"Weekday (Mon-Fri) [{comp['weekday_pct']}%]",
+                name=f"Weekday ({comp['weekday_pct']}%)",
                 x=categories,
                 y=weekday_vals,
-                marker_color="#1f77b4",
+                marker_color="#2563eb",
                 text=[format_inr(v) for v in weekday_vals],
                 textposition="auto",
+                textfont=dict(size=11, color="#ffffff"),
             ),
             go.Bar(
-                name=f"Weekend (Sat-Sun) [{comp['weekend_pct']}%]",
+                name=f"Weekend ({comp['weekend_pct']}%)",
                 x=categories,
                 y=weekend_vals,
-                marker_color="#ff7f0e",
+                marker_color="#94a3b8",
                 text=[format_inr(v) for v in weekend_vals],
                 textposition="auto",
+                textfont=dict(size=11, color="#ffffff"),
             ),
         ]
     )
 
     fig.update_layout(
-        title="<b>Weekday vs Weekend Spending Comparison</b>",
         barmode="group",
-        template="plotly_white",
-        height=380,
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-        margin=dict(l=40, r=40, t=60, b=40),
+        font=dict(family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", size=12, color="#64748b"),
+        xaxis=dict(gridcolor="#f1f5f9", zerolinecolor="#e2e8f0", showline=False),
+        yaxis=dict(gridcolor="#f1f5f9", zerolinecolor="#e2e8f0", showline=False, title_text="Amount (₹)"),
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        height=340,
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1, font=dict(size=11, color="#64748b")),
+        margin=dict(l=10, r=10, t=25, b=10),
     )
     return fig
 
@@ -509,26 +524,26 @@ def plot_budget_vs_actual(budget_df: pd.DataFrame) -> go.Figure:
     df_sorted = budget_df.sort_values(by="pct_used", ascending=True)
 
     # Color code actual bars based on status:
-    # Red for Over Budget, Orange for Near Limit, Green for Within Budget
+    # Crimson for Over Budget, Amber for Near Limit, Emerald for Within Budget
     colors = []
     for s in df_sorted["status"]:
         if s == "Over Budget":
-            colors.append("#d62728")
+            colors.append("#ef4444")
         elif s == "Near Limit":
-            colors.append("#ff7f0e")
+            colors.append("#f59e0b")
         else:
-            colors.append("#2ca02c")
+            colors.append("#10b981")
 
     fig = go.Figure()
 
-    # Bar 1: Budget Limit
+    # Bar 1: Budget Limit Track
     fig.add_trace(
         go.Bar(
             y=df_sorted["category"],
             x=df_sorted["monthly_limit"],
-            name="Budget Limit",
+            name="Budget Target",
             orientation="h",
-            marker=dict(color="#e2e8f0"),
+            marker=dict(color="#f1f5f9", line=dict(color="#e2e8f0", width=1)),
             hovertemplate="<b>%{y}</b><br>Budget Target: %{text}<extra></extra>",
             text=[format_inr(l) for l in df_sorted["monthly_limit"]],
         )
@@ -544,23 +559,27 @@ def plot_budget_vs_actual(budget_df: pd.DataFrame) -> go.Figure:
             marker=dict(color=colors),
             hovertemplate="<b>%{y}</b><br>Actual Spent: %{text}<extra></extra>",
             text=[
-                f"{format_inr(s)} ({p}% utilized - {stat})"
+                f"{format_inr(s)} ({p}% - {stat})"
                 for s, p, stat in zip(
                     df_sorted["spent"], df_sorted["pct_used"], df_sorted["status"]
                 )
             ],
+            textposition="inside",
+            insidetextanchor="end",
+            textfont=dict(size=11, color="#ffffff"),
         )
     )
 
     fig.update_layout(
-        title="<b>Budget vs Actual Spending per Category</b>",
-        barmode="overlay",  # Overlay so actual sits inside budget bar
-        xaxis_title="Amount (₹)",
-        yaxis_title="",
-        template="plotly_white",
-        height=380,
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-        margin=dict(l=20, r=20, t=50, b=30),
+        barmode="overlay",
+        font=dict(family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", size=12, color="#64748b"),
+        xaxis=dict(gridcolor="#f1f5f9", zerolinecolor="#e2e8f0", showline=False, title_text="Amount (₹)"),
+        yaxis=dict(gridcolor="#f1f5f9", zerolinecolor="#e2e8f0", showline=False),
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        height=360,
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1, font=dict(size=11, color="#64748b")),
+        margin=dict(l=10, r=10, t=25, b=25),
     )
     return fig
 

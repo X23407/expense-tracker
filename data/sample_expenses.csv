@@ -1,313 +1,318 @@
 date,amount,category,merchant,payment_method,note
-2026-04-29,202.32,Food & Dining,Local Tea Stall,UPI,Paid via UPI
-2026-04-29,15.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
-2026-04-29,10.0,Food & Dining,City Food Corner,UPI,Paid via UPI
-2026-04-30,20.0,Education,Stationery & Xerox,UPI,Paid via UPI
-2026-05-01,10000.0,Rent & Utilities,Campus Hostel & Rent,UPI,Monthly accommodation rent for May 2026
-2026-05-01,260.84,Food & Dining,City Food Corner,UPI,Paid via UPI
-2026-05-01,30.0,Food & Dining,City Food Corner,Cash,Paid via Cash
-2026-05-02,140.12,Groceries,City Supermarket,UPI,Paid via UPI
-2026-05-02,40.0,Food & Dining,Local Juice & Snacks,UPI,Paid via UPI
-2026-05-03,90.0,Groceries,City Supermarket,UPI,Paid via UPI
-2026-05-03,45.0,Groceries,Blinkit,Debit Card,Paid via Debit Card
-2026-05-05,67.02,Food & Dining,Zomato,UPI,Paid via UPI
-2026-05-06,90.0,Groceries,City Supermarket,Debit Card,Paid via Debit Card
-2026-05-06,89.39,Transport,Uber Auto,UPI,Paid via UPI
-2026-05-06,40.0,Food & Dining,Swiggy,UPI,Paid via UPI
-2026-05-08,95.38,Food & Dining,Local Tea Stall,UPI,Paid via UPI
-2026-05-08,90.0,Groceries,Local Kirana Store,UPI,Paid via UPI
-2026-05-09,60.0,Education,College Bookstore,Credit Card,Paid via Credit Card
-2026-05-10,264.57,Food & Dining,Chai Point,UPI,Paid via UPI
-2026-05-10,143.15,Food & Dining,Campus Canteen,UPI,Paid via UPI
-2026-05-10,90.0,Food & Dining,The Green Cafe,Cash,Paid via Cash
-2026-05-10,25.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
-2026-05-10,25.0,Food & Dining,Local Juice & Snacks,Cash,Paid via Cash
-2026-05-11,60.0,Food & Dining,Local Dhaba,UPI,Paid via UPI
+2026-05-02,202.32,Food & Dining,Local Tea Stall,UPI,Paid via UPI
+2026-05-02,15.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
+2026-05-02,10.0,Food & Dining,City Food Corner,UPI,Paid via UPI
+2026-05-03,20.0,Education,Stationery & Xerox,UPI,Paid via UPI
+2026-05-04,260.84,Food & Dining,City Food Corner,UPI,Paid via UPI
+2026-05-06,120.0,Groceries,Vegetable Vendor,Debit Card,Paid via Debit Card
+2026-05-07,107.36,Food & Dining,Local Dhaba,UPI,Paid via UPI
+2026-05-08,90.0,Groceries,Blinkit,UPI,Paid via UPI
+2026-05-08,84.65,Groceries,City Supermarket,UPI,Paid via UPI
+2026-05-10,40.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
+2026-05-11,178.92,Food & Dining,Local Juice & Snacks,UPI,Paid via UPI
+2026-05-11,90.0,Groceries,City Supermarket,Debit Card,Paid via Debit Card
+2026-05-11,50.0,Transport,HP Fuel Station,Cash,Paid via Cash
 2026-05-12,119.0,Subscriptions,Spotify Premium,UPI,Monthly student audio streaming subscription
-2026-05-12,50.0,Entertainment,Tea & Snacks with Friends,Credit Card,Paid via Credit Card
-2026-05-13,226.57,Food & Dining,Campus Canteen,UPI,Paid via UPI
-2026-05-14,20.0,Food & Dining,Swiggy,Cash,Paid via Cash
-2026-05-14,10.0,Food & Dining,City Food Corner,Cash,Paid via Cash
-2026-05-15,129.95,Transport,Uber Auto,UPI,Paid via UPI
-2026-05-15,60.0,Food & Dining,Local Dhaba,UPI,Paid via UPI
-2026-05-15,50.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
-2026-05-16,160.41,Transport,Uber Auto,UPI,Paid via UPI
-2026-05-16,88.39,Transport,Rapido Bike Taxi,Cash,Paid via Cash
-2026-05-16,65.0,Groceries,Blinkit,UPI,Paid via UPI
-2026-05-17,66.5,Food & Dining,Zomato,UPI,Paid via UPI
-2026-05-17,15.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
+2026-05-13,42.4,Transport,Uber Auto,UPI,Paid via UPI
+2026-05-14,90.0,Groceries,City Supermarket,Debit Card,Paid via Debit Card
+2026-05-15,256.46,Health,Apollo Pharmacy,UPI,Paid via UPI
+2026-05-15,220.0,Shopping,Local Market Goods,Credit Card,Paid via Credit Card
+2026-05-17,30.0,Food & Dining,The Green Cafe,UPI,Paid via UPI
+2026-05-18,200.0,Miscellaneous,Local Hardware,Cash,Paid via Cash
 2026-05-18,149.0,Subscriptions,YouTube Premium,UPI,Monthly ad-free video streaming
-2026-05-18,136.91,Transport,Uber Auto,Cash,Paid via Cash
-2026-05-18,20.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
-2026-05-19,3800.0,Food & Dining,Grand Celebration Feast,Credit Card,[ANOMALY INJECTED] College graduation and project completion team party
-2026-05-21,35.0,Health,Dr. Lal PathLabs,Cash,Paid via Cash
-2026-05-22,350.0,Shopping,Flipkart,Debit Card,Paid via Debit Card
-2026-05-22,193.63,Miscellaneous,Rohan Sharma (Transfer),Cash,Paid via Cash
-2026-05-22,150.0,Shopping,Myntra,Credit Card,Paid via Credit Card
-2026-05-22,120.0,Groceries,Nature's Basket,UPI,Paid via UPI
-2026-05-23,200.0,Miscellaneous,Amit Verma (Shared Bill),UPI,Paid via UPI
-2026-05-24,203.96,Groceries,Local Kirana Store,UPI,Paid via UPI
-2026-05-25,40.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
-2026-05-26,70.0,Transport,Namma Metro Recharge,UPI,Paid via UPI
-2026-05-26,65.0,Groceries,Local Kirana Store,Debit Card,Paid via Debit Card
-2026-05-27,45.0,Groceries,Nature's Basket,UPI,Paid via UPI
-2026-05-27,30.0,Food & Dining,Local Juice & Snacks,UPI,Paid via UPI
-2026-05-27,10.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
-2026-05-29,353.56,Shopping,Flipkart,Credit Card,Paid via Credit Card
-2026-05-29,60.0,Food & Dining,Zomato,UPI,Paid via UPI
-2026-05-30,50.0,Transport,Namma Metro Recharge,UPI,Paid via UPI
-2026-05-30,20.0,Transport,City Auto Rickshaw,UPI,Paid via UPI
-2026-05-31,70.0,Transport,Rapido Bike Taxi,UPI,Paid via UPI
-2026-05-31,40.0,Transport,Rapido Bike Taxi,UPI,Paid via UPI
+2026-05-19,65.0,Groceries,Vegetable Vendor,UPI,Paid via UPI
+2026-05-21,120.0,Entertainment,BookMyShow,Credit Card,Paid via Credit Card
+2026-05-22,3800.0,Food & Dining,Grand Celebration Feast,Credit Card,[ANOMALY INJECTED] College graduation and project completion team party
+2026-05-22,193.71,Food & Dining,City Food Corner,UPI,Paid via UPI
+2026-05-23,141.67,Food & Dining,Chai Point,UPI,Paid via UPI
+2026-05-23,90.0,Miscellaneous,Courier & Prints,Cash,Paid via Cash
+2026-05-23,40.0,Transport,HP Fuel Station,Cash,Paid via Cash
+2026-05-23,25.0,Food & Dining,Local Juice & Snacks,Cash,Paid via Cash
+2026-05-24,81.65,Transport,Namma Metro Recharge,UPI,Paid via UPI
+2026-05-25,88.39,Transport,Uber Auto,UPI,Paid via UPI
+2026-05-25,45.0,Groceries,Zepto,Debit Card,Paid via Debit Card
+2026-05-25,25.0,Transport,HP Fuel Station,Cash,Paid via Cash
+2026-05-26,50.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
+2026-05-29,350.0,Shopping,Decathlon Sports,UPI,Paid via UPI
+2026-05-29,305.17,Food & Dining,Zomato,UPI,Paid via UPI
+2026-05-30,272.65,Food & Dining,City Food Corner,UPI,Paid via UPI
+2026-05-30,220.12,Food & Dining,Chai Point,UPI,Paid via UPI
+2026-05-31,162.77,Groceries,Local Kirana Store,UPI,Paid via UPI
+2026-05-31,150.0,Shopping,Myntra,UPI,Paid via UPI
 2026-06-01,10000.0,Rent & Utilities,Campus Hostel & Rent,UPI,Monthly accommodation rent for June 2026
-2026-06-01,50.0,Miscellaneous,Campus Stationery,UPI,Paid via UPI
-2026-06-02,146.28,Food & Dining,Zomato,UPI,Paid via UPI
-2026-06-03,123.15,Groceries,City Supermarket,UPI,Paid via UPI
-2026-06-03,90.0,Food & Dining,City Food Corner,UPI,Paid via UPI
-2026-06-04,217.89,Food & Dining,Chai Point,UPI,Paid via UPI
-2026-06-04,157.89,Health,Local Chemist,Cash,Paid via Cash
-2026-06-04,60.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
-2026-06-05,150.0,Shopping,Local Market Goods,UPI,Paid via UPI
-2026-06-05,90.0,Food & Dining,Campus Tea Stall,Cash,Paid via Cash
-2026-06-05,50.0,Food & Dining,The Green Cafe,Cash,Paid via Cash
-2026-06-06,350.0,Shopping,Decathlon Sports,Credit Card,Paid via Credit Card
-2026-06-06,150.0,Shopping,Amazon India,Debit Card,Paid via Debit Card
-2026-06-06,115.03,Transport,Rapido Bike Taxi,Cash,Paid via Cash
-2026-06-07,203.45,Food & Dining,The Green Cafe,UPI,Paid via UPI
-2026-06-07,150.0,Shopping,Amazon India,UPI,Paid via UPI
-2026-06-10,122.85,Food & Dining,Local Dhaba,UPI,Paid via UPI
-2026-06-10,70.0,Transport,Namma Metro Recharge,UPI,Paid via UPI
-2026-06-10,50.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
-2026-06-11,50.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
-2026-06-11,20.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
-2026-06-11,15.0,Food & Dining,The Green Cafe,UPI,Paid via UPI
-2026-06-11,15.0,Food & Dining,Chai Point,Cash,Paid via Cash
-2026-06-12,244.62,Groceries,Blinkit,UPI,Paid via UPI
-2026-06-12,169.02,Food & Dining,Local Dhaba,UPI,Paid via UPI
+2026-06-02,203.96,Groceries,Vegetable Vendor,UPI,Paid via UPI
+2026-06-02,152.58,Food & Dining,The Green Cafe,UPI,Paid via UPI
+2026-06-02,20.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
+2026-06-03,53.9,Transport,Uber Auto,Cash,Paid via Cash
+2026-06-03,15.0,Food & Dining,Local Dhaba,UPI,Paid via UPI
+2026-06-04,65.0,Groceries,Blinkit,UPI,Paid via UPI
+2026-06-04,60.0,Food & Dining,Local Dhaba,UPI,Paid via UPI
+2026-06-05,167.49,Groceries,City Supermarket,Debit Card,Paid via Debit Card
+2026-06-06,180.31,Food & Dining,The Green Cafe,Cash,Paid via Cash
+2026-06-06,120.0,Groceries,Zepto,UPI,Paid via UPI
+2026-06-07,53.92,Transport,Namma Metro Recharge,Cash,Paid via Cash
+2026-06-07,40.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
+2026-06-08,200.0,Miscellaneous,Rohan Sharma (Transfer),UPI,Paid via UPI
+2026-06-08,25.0,Food & Dining,Zomato,Cash,Paid via Cash
+2026-06-09,10.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
+2026-06-10,392.24,Groceries,Zepto,UPI,Paid via UPI
+2026-06-10,30.0,Food & Dining,Local Juice & Snacks,UPI,Paid via UPI
+2026-06-11,70.0,Transport,HP Fuel Station,UPI,Paid via UPI
 2026-06-12,119.0,Subscriptions,Spotify Premium,UPI,Monthly student audio streaming subscription
-2026-06-12,90.0,Groceries,Blinkit,UPI,Paid via UPI
-2026-06-12,84.41,Transport,Uber Auto,UPI,Paid via UPI
-2026-06-12,15.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
-2026-06-13,2800.0,Transport,Motorcycle Service Point,UPI,"[ANOMALY INJECTED] Two-wheeler full servicing, brake pads, and oil replacement"
-2026-06-13,239.23,Food & Dining,Local Dhaba,UPI,Paid via UPI
+2026-06-12,60.0,Food & Dining,Local Dhaba,Cash,Paid via Cash
+2026-06-12,50.0,Food & Dining,Swiggy,UPI,Paid via UPI
+2026-06-13,204.31,Groceries,Vegetable Vendor,Debit Card,Paid via Debit Card
 2026-06-13,90.0,Groceries,City Supermarket,UPI,Paid via UPI
-2026-06-13,50.0,Miscellaneous,Local Hardware,Cash,Paid via Cash
-2026-06-13,30.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
-2026-06-14,315.17,Entertainment,Steam Games,UPI,Paid via UPI
-2026-06-14,65.0,Groceries,City Supermarket,UPI,Paid via UPI
-2026-06-14,15.0,Food & Dining,City Food Corner,Cash,Paid via Cash
-2026-06-15,40.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
-2026-06-15,20.0,Miscellaneous,Courier & Prints,Cash,Paid via Cash
-2026-06-15,10.0,Miscellaneous,Rohan Sharma (Transfer),UPI,Paid via UPI
-2026-06-16,329.24,Miscellaneous,Vikram Singh (Transfer),UPI,Paid via UPI
+2026-06-13,10.0,Miscellaneous,Vikram Singh (Transfer),UPI,Paid via UPI
+2026-06-14,434.71,Shopping,Local Market Goods,UPI,Paid via UPI
+2026-06-14,220.0,Shopping,Local Market Goods,UPI,Paid via UPI
+2026-06-14,70.0,Transport,Rapido Bike Taxi,UPI,Paid via UPI
+2026-06-14,59.4,Transport,Rapido Bike Taxi,UPI,Paid via UPI
+2026-06-16,2800.0,Transport,Motorcycle Service Point,UPI,"[ANOMALY INJECTED] Two-wheeler full servicing, brake pads, and oil replacement"
 2026-06-16,100.45,Transport,Rapido Bike Taxi,UPI,Paid via UPI
-2026-06-16,97.93,Transport,HP Fuel Station,Cash,Paid via Cash
-2026-06-17,141.17,Food & Dining,Campus Canteen,UPI,Paid via UPI
+2026-06-16,90.0,Food & Dining,City Food Corner,UPI,Paid via UPI
 2026-06-18,149.0,Subscriptions,YouTube Premium,UPI,Monthly ad-free video streaming
-2026-06-18,90.0,Groceries,Zepto,UPI,Paid via UPI
-2026-06-18,15.0,Food & Dining,Swiggy,UPI,Paid via UPI
-2026-06-20,249.01,Groceries,Local Kirana Store,UPI,Paid via UPI
-2026-06-20,114.73,Transport,Namma Metro Recharge,UPI,Paid via UPI
-2026-06-23,59.27,Education,College Bookstore,UPI,Paid via UPI
-2026-06-23,25.0,Transport,HP Fuel Station,UPI,Paid via UPI
-2026-06-24,10.0,Miscellaneous,Campus Stationery,UPI,Paid via UPI
-2026-06-25,50.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
-2026-06-27,90.0,Groceries,City Supermarket,UPI,Paid via UPI
-2026-06-27,79.13,Food & Dining,City Food Corner,UPI,Paid via UPI
-2026-06-27,70.0,Transport,City Auto Rickshaw,UPI,Paid via UPI
-2026-06-27,30.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
-2026-06-28,253.43,Food & Dining,Local Tea Stall,Cash,Paid via Cash
-2026-06-28,79.32,Transport,Rapido Bike Taxi,Cash,Paid via Cash
-2026-06-28,50.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
-2026-06-28,15.0,Food & Dining,City Food Corner,UPI,Paid via UPI
-2026-06-30,329.76,Food & Dining,Local Juice & Snacks,UPI,Paid via UPI
+2026-06-19,241.6,Food & Dining,Campus Canteen,Cash,Paid via Cash
+2026-06-19,50.0,Transport,Namma Metro Recharge,UPI,Paid via UPI
+2026-06-19,50.0,Food & Dining,The Green Cafe,Cash,Paid via Cash
+2026-06-20,281.47,Food & Dining,Chai Point,UPI,Paid via UPI
+2026-06-20,90.0,Food & Dining,Campus Tea Stall,Cash,Paid via Cash
+2026-06-20,25.0,Food & Dining,Zomato,UPI,Paid via UPI
+2026-06-21,183.36,Food & Dining,Local Tea Stall,UPI,Paid via UPI
+2026-06-21,70.0,Transport,Namma Metro Recharge,UPI,Paid via UPI
+2026-06-21,65.0,Groceries,City Supermarket,UPI,Paid via UPI
+2026-06-21,65.0,Groceries,City Supermarket,Debit Card,Paid via Debit Card
+2026-06-21,50.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
+2026-06-23,253.82,Education,Blossom Book House,Credit Card,Paid via Credit Card
+2026-06-23,190.23,Groceries,Zepto,Debit Card,Paid via Debit Card
+2026-06-23,177.65,Health,Dr. Lal PathLabs,Cash,Paid via Cash
+2026-06-23,60.0,Education,College Bookstore,Credit Card,Paid via Credit Card
+2026-06-24,90.0,Groceries,City Supermarket,Debit Card,Paid via Debit Card
+2026-06-24,15.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
+2026-06-25,356.32,Groceries,Zepto,UPI,Paid via UPI
+2026-06-25,90.0,Food & Dining,City Food Corner,UPI,Paid via UPI
+2026-06-25,80.0,Entertainment,BookMyShow,Credit Card,Paid via Credit Card
+2026-06-26,184.11,Food & Dining,Chai Point,UPI,Paid via UPI
+2026-06-26,50.0,Miscellaneous,Local Hardware,Cash,Paid via Cash
+2026-06-26,10.0,Miscellaneous,Rohan Sharma (Transfer),UPI,Paid via UPI
+2026-06-27,220.0,Shopping,Amazon India,Debit Card,Paid via Debit Card
+2026-06-27,40.0,Transport,Namma Metro Recharge,Cash,Paid via Cash
+2026-06-27,38.13,Transport,Uber Auto,UPI,Paid via UPI
+2026-06-27,10.0,Miscellaneous,Courier & Prints,UPI,Paid via UPI
+2026-06-29,65.0,Groceries,City Supermarket,UPI,Paid via UPI
+2026-06-30,120.0,Groceries,Vegetable Vendor,UPI,Paid via UPI
 2026-07-01,10000.0,Rent & Utilities,Campus Hostel & Rent,UPI,Monthly accommodation rent for July 2026
-2026-07-01,191.6,Groceries,City Supermarket,Debit Card,Paid via Debit Card
-2026-07-02,254.38,Groceries,Nature's Basket,UPI,Paid via UPI
-2026-07-03,185.58,Food & Dining,Local Juice & Snacks,Cash,Paid via Cash
-2026-07-03,50.0,Transport,Uber Auto,UPI,Paid via UPI
-2026-07-04,197.62,Groceries,Vegetable Vendor,Debit Card,Paid via Debit Card
-2026-07-04,110.0,Health,Tata 1mg,Cash,Paid via Cash
-2026-07-04,45.0,Groceries,Nature's Basket,Debit Card,Paid via Debit Card
-2026-07-05,202.48,Food & Dining,Campus Canteen,Cash,Paid via Cash
-2026-07-05,60.0,Food & Dining,Local Dhaba,UPI,Paid via UPI
-2026-07-05,40.0,Food & Dining,The Green Cafe,UPI,Paid via UPI
-2026-07-07,207.91,Miscellaneous,Rohan Sharma (Transfer),UPI,Paid via UPI
-2026-07-07,10.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
-2026-07-08,4200.0,Shopping,Zara Retail India,Credit Card,[ANOMALY INJECTED] Winter jacket and formal interview outfit
-2026-07-09,178.33,Food & Dining,Zomato,Cash,Paid via Cash
-2026-07-09,95.28,Transport,Uber Auto,UPI,Paid via UPI
-2026-07-09,20.0,Miscellaneous,Campus Stationery,UPI,Paid via UPI
-2026-07-09,15.0,Food & Dining,Campus Canteen,Cash,Paid via Cash
-2026-07-10,329.76,Health,Apollo Pharmacy,UPI,Paid via UPI
-2026-07-10,240.89,Miscellaneous,Amit Verma (Shared Bill),UPI,Paid via UPI
-2026-07-11,150.0,Shopping,Decathlon Sports,Credit Card,Paid via Credit Card
-2026-07-12,220.0,Shopping,Amazon India,Credit Card,Paid via Credit Card
-2026-07-12,158.32,Food & Dining,City Food Corner,UPI,Paid via UPI
+2026-07-03,45.0,Groceries,Nature's Basket,Debit Card,Paid via Debit Card
+2026-07-03,22.47,Transport,Rapido Bike Taxi,UPI,Paid via UPI
+2026-07-04,183.65,Food & Dining,The Green Cafe,UPI,Paid via UPI
+2026-07-05,202.71,Miscellaneous,Vikram Singh (Transfer),UPI,Paid via UPI
+2026-07-05,120.0,Groceries,Vegetable Vendor,UPI,Paid via UPI
+2026-07-05,25.0,Food & Dining,Chai Point,UPI,Paid via UPI
+2026-07-05,10.0,Food & Dining,Local Dhaba,UPI,Paid via UPI
+2026-07-08,321.24,Food & Dining,Local Dhaba,UPI,Paid via UPI
+2026-07-08,212.4,Food & Dining,Campus Canteen,UPI,Paid via UPI
+2026-07-08,40.0,Food & Dining,The Green Cafe,Cash,Paid via Cash
+2026-07-09,20.0,Education,Blossom Book House,UPI,Paid via UPI
+2026-07-10,241.97,Food & Dining,Campus Canteen,UPI,Paid via UPI
+2026-07-10,215.51,Food & Dining,Swiggy,UPI,Paid via UPI
+2026-07-10,25.0,Transport,HP Fuel Station,UPI,Paid via UPI
+2026-07-11,4200.0,Shopping,Zara Retail India,Credit Card,[ANOMALY INJECTED] Winter jacket and formal interview outfit
+2026-07-11,97.56,Groceries,Zepto,UPI,Paid via UPI
 2026-07-12,119.0,Subscriptions,Spotify Premium,UPI,Monthly student audio streaming subscription
-2026-07-13,229.93,Food & Dining,City Food Corner,Cash,Paid via Cash
-2026-07-13,130.95,Food & Dining,Zomato,Cash,Paid via Cash
-2026-07-13,25.0,Transport,HP Fuel Station,UPI,Paid via UPI
-2026-07-13,25.0,Transport,City Auto Rickshaw,Cash,Paid via Cash
-2026-07-15,90.0,Groceries,Blinkit,UPI,Paid via UPI
-2026-07-16,90.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
-2026-07-16,50.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
-2026-07-17,50.0,Food & Dining,The Green Cafe,UPI,Paid via UPI
-2026-07-17,20.0,Transport,City Auto Rickshaw,Cash,Paid via Cash
+2026-07-12,50.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
+2026-07-12,20.0,Transport,HP Fuel Station,UPI,Paid via UPI
+2026-07-13,45.0,Groceries,Vegetable Vendor,Debit Card,Paid via Debit Card
+2026-07-14,40.0,Transport,Rapido Bike Taxi,UPI,Paid via UPI
+2026-07-14,30.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
+2026-07-16,228.44,Groceries,City Supermarket,UPI,Paid via UPI
+2026-07-16,120.0,Groceries,Zepto,UPI,Paid via UPI
+2026-07-16,70.0,Transport,City Auto Rickshaw,UPI,Paid via UPI
+2026-07-17,196.61,Food & Dining,Local Juice & Snacks,Cash,Paid via Cash
+2026-07-17,141.09,Food & Dining,Local Juice & Snacks,UPI,Paid via UPI
+2026-07-17,50.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
+2026-07-17,15.0,Food & Dining,Chai Point,UPI,Paid via UPI
 2026-07-18,149.0,Subscriptions,YouTube Premium,UPI,Monthly ad-free video streaming
-2026-07-19,80.0,Entertainment,Gaming Cafe,Credit Card,Paid via Credit Card
-2026-07-19,10.0,Food & Dining,Campus Canteen,Cash,Paid via Cash
-2026-07-20,433.1,Miscellaneous,Vikram Singh (Transfer),UPI,Paid via UPI
-2026-07-21,350.0,Shopping,Amazon India,Credit Card,Paid via Credit Card
-2026-07-21,129.72,Groceries,Nature's Basket,Debit Card,Paid via Debit Card
-2026-07-21,120.0,Groceries,Local Kirana Store,UPI,Paid via UPI
-2026-07-21,89.14,Transport,HP Fuel Station,Cash,Paid via Cash
-2026-07-23,205.82,Food & Dining,Swiggy,UPI,Paid via UPI
-2026-07-24,332.54,Miscellaneous,Courier & Prints,Cash,Paid via Cash
-2026-07-24,113.82,Food & Dining,The Green Cafe,UPI,Paid via UPI
-2026-07-24,60.0,Food & Dining,Local Tea Stall,Cash,Paid via Cash
-2026-07-25,90.0,Groceries,Zepto,UPI,Paid via UPI
-2026-07-26,696.37,Shopping,Local Market Goods,UPI,Paid via UPI
-2026-07-26,50.0,Transport,Namma Metro Recharge,UPI,Paid via UPI
-2026-07-26,45.0,Groceries,Blinkit,UPI,Paid via UPI
-2026-07-26,15.0,Food & Dining,Chai Point,UPI,Paid via UPI
-2026-07-27,147.63,Groceries,Vegetable Vendor,UPI,Paid via UPI
-2026-07-27,63.03,Transport,Namma Metro Recharge,UPI,Paid via UPI
-2026-07-28,120.0,Groceries,Nature's Basket,UPI,Paid via UPI
-2026-07-30,5200.0,Education,University Exam Portal,Credit Card,[ANOMALY INJECTED] Semester examination and professional certification fees
-2026-07-30,239.36,Food & Dining,The Green Cafe,UPI,Paid via UPI
-2026-07-30,150.0,Shopping,Flipkart,Credit Card,Paid via Credit Card
-2026-07-30,40.0,Transport,HP Fuel Station,Cash,Paid via Cash
-2026-07-30,20.0,Miscellaneous,Local Hardware,UPI,Paid via UPI
-2026-07-31,585.8,Miscellaneous,Local Hardware,Cash,Paid via Cash
-2026-07-31,30.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
-2026-07-31,25.0,Food & Dining,Campus Tea Stall,Cash,Paid via Cash
+2026-07-18,90.0,Miscellaneous,Courier & Prints,UPI,Paid via UPI
+2026-07-18,10.0,Food & Dining,The Green Cafe,UPI,Paid via UPI
+2026-07-20,341.12,Miscellaneous,Local Hardware,UPI,Paid via UPI
+2026-07-20,89.06,Transport,Uber Auto,UPI,Paid via UPI
+2026-07-20,40.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
+2026-07-20,25.0,Food & Dining,Zomato,Cash,Paid via Cash
+2026-07-21,35.0,Health,Tata 1mg,Cash,Paid via Cash
+2026-07-21,20.0,Miscellaneous,Local Hardware,UPI,Paid via UPI
+2026-07-22,350.0,Shopping,Decathlon Sports,UPI,Paid via UPI
+2026-07-22,60.0,Food & Dining,The Green Cafe,UPI,Paid via UPI
+2026-07-23,420.37,Shopping,Decathlon Sports,UPI,Paid via UPI
+2026-07-23,20.0,Food & Dining,Swiggy,Cash,Paid via Cash
+2026-07-24,229.93,Food & Dining,Campus Canteen,UPI,Paid via UPI
+2026-07-24,130.95,Food & Dining,Chai Point,UPI,Paid via UPI
+2026-07-24,50.0,Transport,Rapido Bike Taxi,UPI,Paid via UPI
+2026-07-24,25.0,Transport,Uber Auto,UPI,Paid via UPI
+2026-07-26,309.12,Groceries,Vegetable Vendor,Debit Card,Paid via Debit Card
+2026-07-27,288.63,Food & Dining,Zomato,Cash,Paid via Cash
+2026-07-27,229.11,Food & Dining,Local Dhaba,UPI,Paid via UPI
+2026-07-30,235.21,Miscellaneous,Courier & Prints,UPI,Paid via UPI
 2026-08-01,10000.0,Rent & Utilities,Campus Hostel & Rent,UPI,Monthly accommodation rent for August 2026
-2026-08-01,120.0,Groceries,Nature's Basket,UPI,Paid via UPI
-2026-08-02,238.99,Miscellaneous,Local Hardware,UPI,Paid via UPI
-2026-08-02,183.76,Food & Dining,Local Tea Stall,Cash,Paid via Cash
-2026-08-02,180.42,Food & Dining,Chai Point,Cash,Paid via Cash
-2026-08-02,40.0,Food & Dining,Local Juice & Snacks,UPI,Paid via UPI
-2026-08-03,239.17,Education,Blossom Book House,UPI,Paid via UPI
-2026-08-04,20.96,Transport,City Auto Rickshaw,Cash,Paid via Cash
-2026-08-06,380.54,Groceries,Blinkit,UPI,Paid via UPI
-2026-08-06,212.61,Groceries,City Supermarket,UPI,Paid via UPI
-2026-08-06,200.0,Miscellaneous,Courier & Prints,UPI,Paid via UPI
-2026-08-09,50.0,Food & Dining,Campus Canteen,Cash,Paid via Cash
-2026-08-09,40.0,Food & Dining,Local Juice & Snacks,UPI,Paid via UPI
-2026-08-09,30.0,Food & Dining,The Green Cafe,Cash,Paid via Cash
-2026-08-10,346.87,Groceries,Blinkit,UPI,Paid via UPI
-2026-08-11,200.0,Miscellaneous,Local Hardware,UPI,Paid via UPI
-2026-08-11,50.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
-2026-08-12,224.57,Health,Clinic Consultation,UPI,Paid via UPI
+2026-08-01,60.0,Health,Tata 1mg,Cash,Paid via Cash
+2026-08-01,20.0,Miscellaneous,Local Hardware,UPI,Paid via UPI
+2026-08-02,5200.0,Education,University Exam Portal,Credit Card,[ANOMALY INJECTED] Semester examination and professional certification fees
+2026-08-02,100.44,Transport,HP Fuel Station,UPI,Paid via UPI
+2026-08-02,65.0,Groceries,Zepto,UPI,Paid via UPI
+2026-08-02,45.0,Groceries,Zepto,UPI,Paid via UPI
+2026-08-03,120.0,Groceries,Vegetable Vendor,UPI,Paid via UPI
+2026-08-05,25.0,Food & Dining,Local Juice & Snacks,Cash,Paid via Cash
+2026-08-07,200.0,Miscellaneous,Courier & Prints,Cash,Paid via Cash
+2026-08-07,197.93,Food & Dining,Swiggy,Cash,Paid via Cash
+2026-08-07,181.2,Education,Udemy Course,Credit Card,Paid via Credit Card
+2026-08-07,40.0,Food & Dining,Swiggy,Cash,Paid via Cash
+2026-08-09,480.88,Groceries,Local Kirana Store,Debit Card,Paid via Debit Card
+2026-08-09,350.0,Shopping,Amazon India,Credit Card,Paid via Credit Card
+2026-08-09,120.0,Groceries,Local Kirana Store,UPI,Paid via UPI
+2026-08-09,53.63,Transport,Uber Auto,Cash,Paid via Cash
+2026-08-10,120.0,Groceries,Local Kirana Store,Debit Card,Paid via Debit Card
+2026-08-11,207.34,Food & Dining,The Green Cafe,UPI,Paid via UPI
+2026-08-12,220.0,Shopping,Flipkart,Credit Card,Paid via Credit Card
 2026-08-12,119.0,Subscriptions,Spotify Premium,UPI,Monthly student audio streaming subscription
-2026-08-12,45.0,Groceries,Vegetable Vendor,Debit Card,Paid via Debit Card
-2026-08-12,25.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
-2026-08-13,50.0,Transport,City Auto Rickshaw,Cash,Paid via Cash
-2026-08-14,90.0,Food & Dining,City Food Corner,UPI,Paid via UPI
-2026-08-18,177.38,Food & Dining,Local Juice & Snacks,UPI,Paid via UPI
+2026-08-12,50.0,Food & Dining,Local Dhaba,UPI,Paid via UPI
+2026-08-13,90.0,Miscellaneous,Vikram Singh (Transfer),UPI,Paid via UPI
+2026-08-13,90.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
+2026-08-13,60.0,Health,Clinic Consultation,Cash,Paid via Cash
+2026-08-13,15.0,Food & Dining,Chai Point,UPI,Paid via UPI
+2026-08-14,446.38,Groceries,Vegetable Vendor,UPI,Paid via UPI
+2026-08-14,202.05,Food & Dining,Campus Canteen,UPI,Paid via UPI
+2026-08-14,20.0,Education,College Bookstore,UPI,Paid via UPI
+2026-08-15,30.0,Food & Dining,Local Dhaba,UPI,Paid via UPI
+2026-08-15,10.0,Miscellaneous,Vikram Singh (Transfer),UPI,Paid via UPI
+2026-08-16,270.66,Groceries,Vegetable Vendor,Debit Card,Paid via Debit Card
+2026-08-16,148.93,Groceries,City Supermarket,UPI,Paid via UPI
+2026-08-16,60.0,Education,Stationery & Xerox,UPI,Paid via UPI
+2026-08-16,50.0,Food & Dining,Local Dhaba,UPI,Paid via UPI
+2026-08-16,45.0,Groceries,Zepto,UPI,Paid via UPI
+2026-08-16,40.0,Transport,City Auto Rickshaw,UPI,Paid via UPI
+2026-08-16,25.0,Food & Dining,Campus Tea Stall,Cash,Paid via Cash
+2026-08-17,346.87,Groceries,Local Kirana Store,UPI,Paid via UPI
+2026-08-17,265.3,Miscellaneous,Rohan Sharma (Transfer),UPI,Paid via UPI
+2026-08-17,212.61,Groceries,Vegetable Vendor,UPI,Paid via UPI
 2026-08-18,149.0,Subscriptions,YouTube Premium,UPI,Monthly ad-free video streaming
-2026-08-19,90.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
-2026-08-19,60.0,Food & Dining,The Green Cafe,UPI,Paid via UPI
-2026-08-19,15.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
-2026-08-20,171.44,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
-2026-08-21,65.0,Groceries,Zepto,UPI,Paid via UPI
-2026-08-22,3500.0,Health,Dr. Smile Dental Clinic,UPI,[ANOMALY INJECTED] Emergency root canal treatment and medication
-2026-08-22,133.66,Miscellaneous,Vikram Singh (Transfer),UPI,Paid via UPI
-2026-08-23,10.0,Miscellaneous,Amit Verma (Shared Bill),UPI,Paid via UPI
-2026-08-24,229.13,Food & Dining,City Food Corner,UPI,Paid via UPI
-2026-08-27,323.33,Groceries,Zepto,Debit Card,Paid via Debit Card
-2026-08-28,226.12,Food & Dining,Zomato,UPI,Paid via UPI
-2026-08-28,60.0,Food & Dining,Local Dhaba,UPI,Paid via UPI
-2026-08-29,274.24,Groceries,Blinkit,UPI,Paid via UPI
-2026-08-29,45.0,Groceries,Blinkit,UPI,Paid via UPI
-2026-08-30,10.0,Food & Dining,Swiggy,Cash,Paid via Cash
+2026-08-20,295.55,Food & Dining,Local Tea Stall,UPI,Paid via UPI
+2026-08-20,41.53,Food & Dining,Local Juice & Snacks,UPI,Paid via UPI
+2026-08-20,30.0,Food & Dining,Campus Tea Stall,Cash,Paid via Cash
+2026-08-21,120.0,Groceries,Zepto,UPI,Paid via UPI
+2026-08-21,50.0,Miscellaneous,Vikram Singh (Transfer),UPI,Paid via UPI
+2026-08-22,284.34,Groceries,City Supermarket,UPI,Paid via UPI
+2026-08-22,239.32,Groceries,Blinkit,UPI,Paid via UPI
+2026-08-22,60.0,Health,Local Chemist,Cash,Paid via Cash
+2026-08-22,25.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
+2026-08-23,209.33,Food & Dining,Zomato,UPI,Paid via UPI
+2026-08-23,104.81,Food & Dining,Zomato,Cash,Paid via Cash
+2026-08-25,3500.0,Health,Dr. Smile Dental Clinic,UPI,[ANOMALY INJECTED] Emergency root canal treatment and medication
+2026-08-25,90.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
+2026-08-25,25.0,Transport,Rapido Bike Taxi,UPI,Paid via UPI
+2026-08-28,65.27,Food & Dining,Local Juice & Snacks,Cash,Paid via Cash
+2026-08-29,60.0,Food & Dining,City Food Corner,UPI,Paid via UPI
+2026-08-29,10.0,Miscellaneous,Vikram Singh (Transfer),UPI,Paid via UPI
+2026-08-30,200.0,Miscellaneous,Local Hardware,UPI,Paid via UPI
+2026-08-31,60.0,Food & Dining,The Green Cafe,UPI,Paid via UPI
 2026-09-01,10000.0,Rent & Utilities,Campus Hostel & Rent,UPI,Monthly accommodation rent for September 2026
-2026-09-01,314.97,Food & Dining,The Green Cafe,UPI,Paid via UPI
-2026-09-02,336.98,Groceries,Blinkit,UPI,Paid via UPI
-2026-09-02,191.54,Groceries,City Supermarket,Debit Card,Paid via Debit Card
-2026-09-04,161.19,Transport,Uber Auto,Cash,Paid via Cash
-2026-09-05,127.95,Food & Dining,Local Dhaba,UPI,Paid via UPI
-2026-09-05,60.0,Food & Dining,Campus Canteen,Cash,Paid via Cash
-2026-09-05,10.0,Food & Dining,Campus Tea Stall,Cash,Paid via Cash
-2026-09-06,15.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
-2026-09-07,45.0,Groceries,Zepto,UPI,Paid via UPI
-2026-09-08,60.0,Food & Dining,The Green Cafe,UPI,Paid via UPI
-2026-09-08,60.0,Education,Udemy Course,UPI,Paid via UPI
-2026-09-09,141.03,Food & Dining,Zomato,UPI,Paid via UPI
-2026-09-09,25.0,Transport,City Auto Rickshaw,Cash,Paid via Cash
-2026-09-10,60.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
-2026-09-10,25.0,Transport,HP Fuel Station,UPI,Paid via UPI
-2026-09-10,20.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
-2026-09-11,231.09,Food & Dining,Campus Tea Stall,Cash,Paid via Cash
-2026-09-11,45.0,Groceries,Nature's Basket,Debit Card,Paid via Debit Card
+2026-09-01,164.68,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
+2026-09-01,20.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
+2026-09-02,303.42,Groceries,Blinkit,UPI,Paid via UPI
+2026-09-02,20.0,Transport,Namma Metro Recharge,UPI,Paid via UPI
+2026-09-03,274.24,Groceries,Nature's Basket,UPI,Paid via UPI
+2026-09-03,150.84,Groceries,Zepto,Debit Card,Paid via Debit Card
+2026-09-04,107.64,Food & Dining,Zomato,UPI,Paid via UPI
+2026-09-05,60.0,Food & Dining,Local Dhaba,UPI,Paid via UPI
+2026-09-06,97.02,Food & Dining,Local Juice & Snacks,UPI,Paid via UPI
+2026-09-06,81.43,Transport,Namma Metro Recharge,UPI,Paid via UPI
+2026-09-06,45.0,Groceries,Blinkit,UPI,Paid via UPI
+2026-09-06,45.0,Groceries,Local Kirana Store,UPI,Paid via UPI
+2026-09-07,20.0,Transport,City Auto Rickshaw,UPI,Paid via UPI
+2026-09-08,60.0,Food & Dining,City Food Corner,Cash,Paid via Cash
+2026-09-08,25.0,Food & Dining,Local Tea Stall,Cash,Paid via Cash
+2026-09-11,10.0,Food & Dining,Campus Tea Stall,Cash,Paid via Cash
 2026-09-12,119.0,Subscriptions,Spotify Premium,UPI,Monthly student audio streaming subscription
-2026-09-13,47.08,Food & Dining,Local Dhaba,UPI,Paid via UPI
-2026-09-13,25.0,Food & Dining,Local Juice & Snacks,UPI,Paid via UPI
-2026-09-15,152.34,Groceries,Local Kirana Store,Debit Card,Paid via Debit Card
-2026-09-15,25.0,Transport,City Auto Rickshaw,Cash,Paid via Cash
-2026-09-15,20.0,Transport,Uber Auto,Cash,Paid via Cash
-2026-09-16,332.21,Health,Clinic Consultation,Cash,Paid via Cash
-2026-09-16,111.96,Transport,City Auto Rickshaw,UPI,Paid via UPI
-2026-09-16,60.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
-2026-09-16,40.0,Food & Dining,Zomato,UPI,Paid via UPI
-2026-09-17,232.23,Miscellaneous,Vikram Singh (Transfer),Cash,Paid via Cash
+2026-09-12,65.0,Groceries,Nature's Basket,Debit Card,Paid via Debit Card
+2026-09-13,255.3,Food & Dining,Campus Canteen,UPI,Paid via UPI
+2026-09-13,20.0,Education,College Bookstore,UPI,Paid via UPI
+2026-09-14,60.0,Food & Dining,The Green Cafe,UPI,Paid via UPI
+2026-09-14,40.0,Transport,City Auto Rickshaw,UPI,Paid via UPI
+2026-09-15,102.59,Transport,HP Fuel Station,UPI,Paid via UPI
+2026-09-15,90.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
+2026-09-15,10.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
+2026-09-18,168.3,Groceries,Nature's Basket,Debit Card,Paid via Debit Card
 2026-09-18,149.0,Subscriptions,YouTube Premium,UPI,Monthly ad-free video streaming
-2026-09-19,242.14,Miscellaneous,Courier & Prints,UPI,Paid via UPI
-2026-09-19,50.0,Miscellaneous,Courier & Prints,UPI,Paid via UPI
-2026-09-19,50.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
-2026-09-20,50.0,Transport,Uber Auto,UPI,Paid via UPI
-2026-09-20,25.0,Food & Dining,City Food Corner,Cash,Paid via Cash
-2026-09-21,350.0,Shopping,Local Market Goods,UPI,Paid via UPI
-2026-09-22,350.0,Shopping,Flipkart,Credit Card,Paid via Credit Card
-2026-09-23,110.0,Health,Clinic Consultation,UPI,Paid via UPI
-2026-09-24,220.75,Food & Dining,Local Dhaba,UPI,Paid via UPI
-2026-09-25,146.13,Transport,Namma Metro Recharge,UPI,Paid via UPI
-2026-09-25,15.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
-2026-09-25,15.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
-2026-09-27,271.42,Miscellaneous,Vikram Singh (Transfer),Cash,Paid via Cash
-2026-09-27,101.7,Food & Dining,Swiggy,Cash,Paid via Cash
-2026-09-27,90.0,Miscellaneous,Amit Verma (Shared Bill),UPI,Paid via UPI
-2026-09-28,4800.0,Miscellaneous,Mobile Repair Care,UPI,[ANOMALY INJECTED] Smartphone screen replacement and battery overhaul
-2026-09-28,257.11,Food & Dining,Campus Canteen,UPI,Paid via UPI
-2026-09-29,90.0,Food & Dining,Campus Tea Stall,Cash,Paid via Cash
-2026-09-29,30.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
+2026-09-18,30.0,Food & Dining,The Green Cafe,UPI,Paid via UPI
+2026-09-19,30.0,Food & Dining,Campus Tea Stall,Cash,Paid via Cash
+2026-09-20,50.0,Transport,HP Fuel Station,UPI,Paid via UPI
+2026-09-20,50.0,Transport,HP Fuel Station,UPI,Paid via UPI
+2026-09-20,45.0,Groceries,Vegetable Vendor,UPI,Paid via UPI
+2026-09-21,183.79,Food & Dining,Local Tea Stall,UPI,Paid via UPI
+2026-09-22,175.99,Health,Tata 1mg,UPI,Paid via UPI
+2026-09-22,93.9,Transport,Uber Auto,Cash,Paid via Cash
+2026-09-22,60.0,Food & Dining,The Green Cafe,Cash,Paid via Cash
+2026-09-23,262.67,Miscellaneous,Vikram Singh (Transfer),UPI,Paid via UPI
+2026-09-23,154.48,Food & Dining,Swiggy,Cash,Paid via Cash
+2026-09-24,60.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
+2026-09-24,50.0,Miscellaneous,Campus Stationery,UPI,Paid via UPI
+2026-09-24,10.0,Miscellaneous,Vikram Singh (Transfer),Cash,Paid via Cash
+2026-09-25,40.0,Transport,Uber Auto,UPI,Paid via UPI
+2026-09-26,220.0,Shopping,Myntra,Credit Card,Paid via Credit Card
+2026-09-27,99.35,Food & Dining,City Food Corner,UPI,Paid via UPI
+2026-09-27,50.0,Transport,Uber Auto,UPI,Paid via UPI
+2026-09-27,35.0,Health,Dr. Lal PathLabs,Cash,Paid via Cash
+2026-09-28,433.9,Miscellaneous,Local Hardware,UPI,Paid via UPI
+2026-09-29,30.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
+2026-09-29,25.0,Food & Dining,Zomato,Cash,Paid via Cash
+2026-09-30,45.0,Groceries,Vegetable Vendor,UPI,Paid via UPI
 2026-10-01,10000.0,Rent & Utilities,Campus Hostel & Rent,UPI,Monthly accommodation rent for October 2026
-2026-10-01,347.09,Groceries,Nature's Basket,Debit Card,Paid via Debit Card
-2026-10-01,60.0,Health,Clinic Consultation,UPI,Paid via UPI
-2026-10-03,233.29,Health,Clinic Consultation,Cash,Paid via Cash
-2026-10-03,200.0,Miscellaneous,Vikram Singh (Transfer),UPI,Paid via UPI
-2026-10-03,120.0,Groceries,Zepto,Debit Card,Paid via Debit Card
-2026-10-04,120.0,Groceries,Zepto,UPI,Paid via UPI
-2026-10-05,210.15,Health,Clinic Consultation,Cash,Paid via Cash
-2026-10-05,100.94,Health,Local Chemist,Cash,Paid via Cash
-2026-10-06,178.68,Health,Local Chemist,Cash,Paid via Cash
-2026-10-06,90.0,Miscellaneous,Campus Stationery,UPI,Paid via UPI
-2026-10-07,99.03,Food & Dining,Local Tea Stall,Cash,Paid via Cash
-2026-10-07,20.0,Food & Dining,Chai Point,UPI,Paid via UPI
-2026-10-08,50.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
-2026-10-08,20.0,Transport,Rapido Bike Taxi,UPI,Paid via UPI
-2026-10-09,212.97,Groceries,Nature's Basket,UPI,Paid via UPI
-2026-10-10,210.0,Groceries,Vegetable Vendor,Debit Card,Paid via Debit Card
-2026-10-10,98.62,Food & Dining,Campus Canteen,UPI,Paid via UPI
-2026-10-10,20.0,Transport,HP Fuel Station,Cash,Paid via Cash
-2026-10-11,221.33,Food & Dining,Local Tea Stall,Cash,Paid via Cash
+2026-10-01,4800.0,Miscellaneous,Mobile Repair Care,UPI,[ANOMALY INJECTED] Smartphone screen replacement and battery overhaul
+2026-10-01,20.0,Food & Dining,Zomato,UPI,Paid via UPI
+2026-10-01,10.0,Miscellaneous,Courier & Prints,UPI,Paid via UPI
+2026-10-02,30.0,Food & Dining,Zomato,UPI,Paid via UPI
+2026-10-03,361.66,Food & Dining,Swiggy,Cash,Paid via Cash
+2026-10-04,220.0,Shopping,Myntra,UPI,Paid via UPI
+2026-10-04,90.0,Food & Dining,Campus Tea Stall,Cash,Paid via Cash
+2026-10-04,50.0,Food & Dining,Campus Canteen,Cash,Paid via Cash
+2026-10-04,37.7,Food & Dining,Campus Canteen,UPI,Paid via UPI
+2026-10-05,404.56,Groceries,Nature's Basket,Debit Card,Paid via Debit Card
+2026-10-05,120.0,Groceries,Local Kirana Store,UPI,Paid via UPI
+2026-10-06,200.0,Miscellaneous,Vikram Singh (Transfer),UPI,Paid via UPI
+2026-10-07,194.71,Food & Dining,Swiggy,Cash,Paid via Cash
+2026-10-07,120.0,Groceries,Zepto,Debit Card,Paid via Debit Card
+2026-10-07,120.0,Groceries,Zepto,UPI,Paid via UPI
+2026-10-07,65.0,Groceries,Vegetable Vendor,UPI,Paid via UPI
+2026-10-08,338.02,Miscellaneous,Vikram Singh (Transfer),UPI,Paid via UPI
+2026-10-08,120.0,Entertainment,Tea & Snacks with Friends,UPI,Paid via UPI
+2026-10-10,137.82,Miscellaneous,Rohan Sharma (Transfer),UPI,Paid via UPI
+2026-10-10,60.0,Food & Dining,Zomato,UPI,Paid via UPI
+2026-10-10,50.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
+2026-10-10,20.0,Food & Dining,Chai Point,UPI,Paid via UPI
+2026-10-11,116.2,Groceries,Nature's Basket,UPI,Paid via UPI
+2026-10-11,25.0,Food & Dining,Zomato,UPI,Paid via UPI
+2026-10-11,20.0,Transport,Rapido Bike Taxi,UPI,Paid via UPI
 2026-10-12,119.0,Subscriptions,Spotify Premium,UPI,Monthly student audio streaming subscription
-2026-10-13,150.0,Shopping,Myntra,Credit Card,Paid via Credit Card
-2026-10-13,40.0,Transport,Rapido Bike Taxi,UPI,Paid via UPI
-2026-10-13,10.0,Food & Dining,Chai Point,UPI,Paid via UPI
-2026-10-17,120.0,Groceries,Zepto,UPI,Paid via UPI
-2026-10-17,25.0,Transport,Namma Metro Recharge,Cash,Paid via Cash
+2026-10-13,447.21,Shopping,Myntra,UPI,Paid via UPI
+2026-10-14,77.9,Transport,HP Fuel Station,UPI,Paid via UPI
+2026-10-16,150.0,Shopping,Myntra,Credit Card,Paid via Credit Card
+2026-10-16,40.0,Transport,Rapido Bike Taxi,UPI,Paid via UPI
+2026-10-16,10.0,Food & Dining,Chai Point,UPI,Paid via UPI
+2026-10-17,20.0,Food & Dining,Campus Canteen,Cash,Paid via Cash
 2026-10-18,149.0,Subscriptions,YouTube Premium,UPI,Monthly ad-free video streaming
 2026-10-18,65.0,Groceries,Nature's Basket,Debit Card,Paid via Debit Card
-2026-10-18,60.0,Food & Dining,Campus Canteen,Cash,Paid via Cash
-2026-10-20,50.0,Transport,City Auto Rickshaw,Cash,Paid via Cash
-2026-10-20,50.0,Food & Dining,Local Dhaba,UPI,Paid via UPI
-2026-10-20,40.0,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
-2026-10-22,187.9,Food & Dining,Campus Tea Stall,Cash,Paid via Cash
-2026-10-22,169.57,Food & Dining,Campus Canteen,Cash,Paid via Cash
-2026-10-23,40.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
-2026-10-25,229.27,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
-2026-10-25,125.41,Miscellaneous,Courier & Prints,UPI,Paid via UPI
-2026-10-26,46.42,Food & Dining,Local Dhaba,Cash,Paid via Cash
-2026-10-26,10.0,Food & Dining,Swiggy,UPI,Paid via UPI
+2026-10-18,50.0,Transport,Namma Metro Recharge,UPI,Paid via UPI
+2026-10-19,60.0,Food & Dining,Campus Canteen,Cash,Paid via Cash
+2026-10-20,91.48,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
+2026-10-21,111.84,Transport,HP Fuel Station,UPI,Paid via UPI
+2026-10-21,50.0,Food & Dining,Local Dhaba,UPI,Paid via UPI
+2026-10-21,40.0,Food & Dining,The Green Cafe,UPI,Paid via UPI
+2026-10-22,118.19,Food & Dining,Campus Tea Stall,Cash,Paid via Cash
+2026-10-23,187.9,Food & Dining,Campus Canteen,Cash,Paid via Cash
+2026-10-24,40.0,Food & Dining,Local Tea Stall,UPI,Paid via UPI
+2026-10-27,84.13,Transport,Uber Auto,UPI,Paid via UPI
+2026-10-27,46.42,Food & Dining,Campus Tea Stall,UPI,Paid via UPI
+2026-10-27,10.0,Food & Dining,Swiggy,UPI,Paid via UPI
+2026-10-28,321.17,Food & Dining,Local Dhaba,Cash,Paid via Cash
+2026-10-28,90.0,Groceries,Blinkit,UPI,Paid via UPI
+2026-10-28,20.0,Food & Dining,Campus Canteen,UPI,Paid via UPI
+2026-10-29,346.9,Groceries,Vegetable Vendor,UPI,Paid via UPI
+2026-10-29,177.52,Food & Dining,Chai Point,UPI,Paid via UPI
