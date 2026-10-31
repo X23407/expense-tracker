@@ -51,8 +51,8 @@ expense/
 
 ### 1. Clone the repository & enter workspace
 ```bash
-git clone <repository_url>
-cd expense
+git clone https://github.com/x23407/expense-tracker/
+cd expense-tracker
 ```
 
 ### 2. Create and activate a Python virtual environment
@@ -73,7 +73,7 @@ pip install -r requirements.txt
 
 ### 4. Run the Streamlit application
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
 Open your browser at `http://localhost:8501`.
 
